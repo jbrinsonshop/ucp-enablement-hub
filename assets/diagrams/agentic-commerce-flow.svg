@@ -1,0 +1,120 @@
+<svg viewBox="0 0 1000 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="flowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#008060"/>
+      <stop offset="50%" style="stop-color:#00a878"/>
+      <stop offset="100%" style="stop-color:#00848e"/>
+    </linearGradient>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#008060"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1000" height="400" fill="#fafbfb"/>
+  
+  <!-- Title -->
+  <text x="500" y="35" text-anchor="middle" font-family="Inter, sans-serif" font-size="22" font-weight="700" fill="#202223">Agentic Commerce Customer Journey</text>
+  <text x="500" y="55" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#6d7175">From natural language request to completed transaction</text>
+  
+  <!-- Flow Line -->
+  <path d="M 100 200 Q 250 200 350 200 T 500 200 T 650 200 T 800 200 T 900 200" fill="none" stroke="url(#flowGrad)" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Step 1: Discovery -->
+  <g transform="translate(60, 100)">
+    <circle cx="40" cy="100" r="40" fill="white" stroke="#008060" stroke-width="3"/>
+    <text x="40" y="100" text-anchor="middle" dominant-baseline="middle" font-size="28">💬</text>
+    <text x="40" y="160" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#202223">Discovery</text>
+    <text x="40" y="178" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#6d7175">"Find me a gift</text>
+    <text x="40" y="192" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#6d7175">under $100"</text>
+    <circle cx="40" cy="100" r="8" fill="#008060" transform="translate(0, -48)"/>
+    <text x="40" y="48" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="white">1</text>
+  </g>
+  
+  <!-- Step 2: Agent Processing -->
+  <g transform="translate(220, 100)">
+    <circle cx="40" cy="100" r="40" fill="white" stroke="#008060" stroke-width="3"/>
+    <text x="40" y="100" text-anchor="middle" dominant-baseline="middle" font-size="28">🤖</text>
+    <text x="40" y="160" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#202223">AI Agent</text>
+    <text x="40" y="178" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#6d7175">Interprets intent</text>
+    <text x="40" y="192" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#6d7175">Queries via UCP</text>
+    <circle cx="40" cy="100" r="8" fill="#008060" transform="translate(0, -48)"/>
+    <text x="40" y="48" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="white">2</text>
+  </g>
+  
+  <!-- Step 3: Catalog Search -->
+  <g transform="translate(380, 100)">
+    <circle cx="40" cy="100" r="40" fill="white" stroke="#008060" stroke-width="3"/>
+    <text x="40" y="100" text-anchor="middle" dominant-baseline="middle" font-size="28">🔍</text>
+    <text x="40" y="160" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#202223">Catalog</text>
+    <text x="40" y="178" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#6d7175">Products filtered</text>
+    <text x="40" y="192" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#6d7175">Recommendations</text>
+    <circle cx="40" cy="100" r="8" fill="#008060" transform="translate(0, -48)"/>
+    <text x="40" y="48" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="white">3</text>
+  </g>
+  
+  <!-- Step 4: Cart Building -->
+  <g transform="translate(540, 100)">
+    <circle cx="40" cy="100" r="40" fill="white" stroke="#008060" stroke-width="3"/>
+    <text x="40" y="100" text-anchor="middle" dominant-baseline="middle" font-size="28">🛒</text>
+    <text x="40" y="160" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#202223">Cart</text>
+    <text x="40" y="178" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#6d7175">Items added</text>
+    <text x="40" y="192" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#6d7175">Discounts applied</text>
+    <circle cx="40" cy="100" r="8" fill="#008060" transform="translate(0, -48)"/>
+    <text x="40" y="48" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="white">4</text>
+  </g>
+  
+  <!-- Step 5: Checkout -->
+  <g transform="translate(700, 100)">
+    <circle cx="40" cy="100" r="40" fill="white" stroke="#008060" stroke-width="3"/>
+    <text x="40" y="100" text-anchor="middle" dominant-baseline="middle" font-size="28">💳</text>
+    <text x="40" y="160" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#202223">Checkout</text>
+    <text x="40" y="178" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#6d7175">Payment mandate</text>
+    <text x="40" y="192" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#6d7175">Order confirmed</text>
+    <circle cx="40" cy="100" r="8" fill="#008060" transform="translate(0, -48)"/>
+    <text x="40" y="48" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="white">5</text>
+  </g>
+  
+  <!-- Step 6: Post-Purchase -->
+  <g transform="translate(860, 100)">
+    <circle cx="40" cy="100" r="40" fill="white" stroke="#008060" stroke-width="3"/>
+    <text x="40" y="100" text-anchor="middle" dominant-baseline="middle" font-size="28">📦</text>
+    <text x="40" y="160" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#202223">Post-Purchase</text>
+    <text x="40" y="178" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#6d7175">Status updates</text>
+    <text x="40" y="192" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#6d7175">Proactive support</text>
+    <circle cx="40" cy="100" r="8" fill="#008060" transform="translate(0, -48)"/>
+    <text x="40" y="48" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="white">6</text>
+  </g>
+  
+  <!-- UCP Label -->
+  <g transform="translate(300, 260)">
+    <rect x="0" y="0" width="400" height="50" rx="25" fill="#e3f1eb" stroke="#008060" stroke-width="2"/>
+    <text x="200" y="22" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#008060">Universal Commerce Protocol (UCP)</text>
+    <text x="200" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#006e52">Standardizes all interactions between AI agents and merchants</text>
+  </g>
+  
+  <!-- Key Benefits -->
+  <g transform="translate(100, 330)">
+    <rect x="0" y="0" width="200" height="50" rx="8" fill="white" stroke="#e1e3e5" stroke-width="1"/>
+    <text x="20" y="25" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#202223">✓ No checkout abandonment</text>
+    <text x="20" y="42" font-family="Inter, sans-serif" font-size="10" fill="#6d7175">Agents complete purchases</text>
+  </g>
+  
+  <g transform="translate(320, 330)">
+    <rect x="0" y="0" width="200" height="50" rx="8" fill="white" stroke="#e1e3e5" stroke-width="1"/>
+    <text x="20" y="25" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#202223">✓ Secure by design</text>
+    <text x="20" y="42" font-family="Inter, sans-serif" font-size="10" fill="#6d7175">Verifiable credentials + AP2</text>
+  </g>
+  
+  <g transform="translate(540, 330)">
+    <rect x="0" y="0" width="200" height="50" rx="8" fill="white" stroke="#e1e3e5" stroke-width="1"/>
+    <text x="20" y="25" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#202223">✓ Reduced support tickets</text>
+    <text x="20" y="42" font-family="Inter, sans-serif" font-size="10" fill="#6d7175">Proactive order updates</text>
+  </g>
+  
+  <g transform="translate(760, 330)">
+    <rect x="0" y="0" width="200" height="50" rx="8" fill="white" stroke="#e1e3e5" stroke-width="1"/>
+    <text x="20" y="25" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#202223">✓ Merchant control</text>
+    <text x="20" y="42" font-family="Inter, sans-serif" font-size="10" fill="#6d7175">Opt-in, configurable access</text>
+  </g>
+</svg>

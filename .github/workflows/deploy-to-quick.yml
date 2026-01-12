@@ -1,0 +1,30 @@
+name: Deploy to Quick
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Deployment environment'
+        required: false
+        default: 'production'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Deploy to Quick
+        uses: Shopify/skai-train/.github/actions/deploy-to-quick@main
+        with:
+          site_name: ucp-enablement-hub
+          dir: .

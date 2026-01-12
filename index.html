@@ -1,0 +1,2896 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCP Enablement Hub | Shopify Enterprise</title>
+    <meta name="description" content="Universal Commerce Protocol enablement for Shopify Enterprise Solutions Engineers. Learn UCP capabilities, mental models, and talk tracks.">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Skip Navigation for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Navigation -->
+    <nav class="nav" id="main-nav">
+        <div class="nav-brand">
+            <svg class="nav-logo" viewBox="0 0 109 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24.5 5.87c-.13-.04-.76-.06-.76-.06s-1.56-1.53-1.72-1.7c-.16-.16-.47-.11-.59-.08l-.82.25c-.1-.28-.26-.62-.47-.97-.7-1.2-1.72-1.83-2.95-1.84h-.02c-.09 0-.17 0-.26.02-.04-.05-.08-.09-.12-.13-.53-.57-1.22-.85-2.03-.82-1.58.05-3.15 1.19-4.42 3.2-1.13 1.78-1.7 4.02-1.91 4.84l-3.14.97c-.94.3-1 .33-1.12 1.21L.33 39.76l19.17 3.3 10.8-2.67s-4.7-31.68-4.74-31.93c-.04-.24-.22-.55-.56-.59zM17.42 8.9l-2.6.81c.25-1.05.72-2.1 1.3-2.78.22-.26.53-.55.89-.72.34.73.41 1.77.41 2.7zm-2.5-3.95c.3 0 .55.06.77.19-.33.17-.66.44-.97.78-.77.9-1.36 2.3-1.6 3.65l-2.18.67c.43-2.05 2.14-5.24 3.98-5.29zm.74 14.31s-.92-.49-2.05-.49c-1.66 0-1.74 1.04-1.74 1.3 0 1.43 3.73 1.98 3.73 5.33 0 2.63-1.67 4.33-3.92 4.33-2.7 0-4.08-1.68-4.08-1.68l.72-2.39s1.42 1.22 2.62 1.22c.78 0 1.1-.62 1.1-1.07 0-1.87-3.06-1.95-3.06-5.02 0-2.58 1.85-5.08 5.6-5.08 1.45 0 2.16.42 2.16.42l-1.08 3.13zm2.92-10.03c0-.82-.11-1.97-.5-2.95.66.1 1.25.66 1.61 1.32.24.44.42.99.52 1.58l-1.63.5v-.45z" fill="currentColor"/>
+            </svg>
+            <span class="nav-title">UCP Enablement Hub</span>
+        </div>
+        <div class="nav-links">
+            <a href="#overview" class="nav-link" data-section="overview">Overview</a>
+            <a href="#capabilities" class="nav-link" data-section="capabilities">Capabilities</a>
+            <a href="#enterprise" class="nav-link" data-section="enterprise">Enterprise</a>
+            <a href="#agentic-plan" class="nav-link" data-section="agentic-plan">Agentic Plan</a>
+            <a href="#mental-models" class="nav-link" data-section="mental-models">Mental Models</a>
+            <a href="#talk-tracks" class="nav-link" data-section="talk-tracks">Talk Tracks</a>
+            <a href="#resources" class="nav-link" data-section="resources">Resources</a>
+            <a href="#faq" class="nav-link" data-section="faq">FAQ</a>
+        </div>
+        <div class="nav-actions">
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+        </div>
+        <button class="nav-mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="#overview" class="mobile-nav-link" data-section="overview">Overview</a>
+        <a href="#capabilities" class="mobile-nav-link" data-section="capabilities">Capabilities</a>
+        <a href="#enterprise" class="mobile-nav-link" data-section="enterprise">Enterprise</a>
+        <a href="#agentic-plan" class="mobile-nav-link" data-section="agentic-plan">Agentic Plan</a>
+        <a href="#mental-models" class="mobile-nav-link" data-section="mental-models">Mental Models</a>
+        <a href="#talk-tracks" class="mobile-nav-link" data-section="talk-tracks">Talk Tracks</a>
+        <a href="#resources" class="mobile-nav-link" data-section="resources">Resources</a>
+        <a href="#faq" class="mobile-nav-link" data-section="faq">FAQ</a>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content">
+    
+    <!-- Hero Section -->
+    <section class="hero" id="hero" aria-label="Introduction to Universal Commerce Protocol">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="hero-grid"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                <span>NRF 2026 Launch Partner</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="hero-title-line">Universal Commerce</span>
+                <span class="hero-title-line gradient-text">Protocol</span>
+            </h1>
+            <p class="hero-subtitle">The open standard transforming how enterprise brands reach customers. While competitors wait, your merchants can capture the AI commerce channel today—with zero development, native Shopify integration, and Google as launch partner.</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-value">9X</span>
+                    <span class="stat-label">AI Traffic Growth</span>
+                    <span class="stat-context">Since Jan 2025</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">14X</span>
+                    <span class="stat-label">Order Increase</span>
+                    <span class="stat-context">From AI Searches</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">2X</span>
+                    <span class="stat-label">Shops with AI Traffic</span>
+                    <span class="stat-context">Year over Year</span>
+                </div>
+            </div>
+            <div class="hero-actions">
+                <a href="#overview" class="btn btn-primary">Start Learning</a>
+                <a href="#talk-tracks" class="btn btn-secondary">View Talk Tracks</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-diagram" id="hero-diagram">
+                <!-- SVG diagram inserted via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Navigation Cards -->
+    <section class="quick-nav" id="quick-nav">
+        <div class="container">
+            <div class="quick-nav-grid">
+                <a href="#overview" class="quick-nav-card" data-section="overview">
+                    <div class="quick-nav-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                        </svg>
+                    </div>
+                    <h3>What is UCP?</h3>
+                    <p>Understand the protocol and why Shopify is a foundation partner</p>
+                </a>
+                <a href="#capabilities" class="quick-nav-card" data-section="capabilities">
+                    <div class="quick-nav-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="14" width="7" height="7"></rect>
+                            <rect x="3" y="14" width="7" height="7"></rect>
+                        </svg>
+                    </div>
+                    <h3>Core Capabilities</h3>
+                    <p>Checkout, Identity Linking, and Order Management deep dive</p>
+                </a>
+                <a href="#enterprise" class="quick-nav-card" data-section="enterprise">
+                    <div class="quick-nav-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                            <path d="M2 17l10 5 10-5"></path>
+                            <path d="M2 12l10 5 10-5"></path>
+                        </svg>
+                    </div>
+                    <h3>Enterprise Playbook</h3>
+                    <p>Positioning, readiness assessment, and competitive differentiation</p>
+                </a>
+                <a href="#mental-models" class="quick-nav-card" data-section="mental-models">
+                    <div class="quick-nav-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                        </svg>
+                    </div>
+                    <h3>Mental Models</h3>
+                    <p>Five frameworks for explaining UCP to enterprise merchants</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 1: Overview -->
+    <section class="module" id="overview" role="region" aria-labelledby="overview-title">
+        <div class="container">
+            <div class="module-header">
+                <span class="module-number">01</span>
+                <h2 class="module-title" id="overview-title">What is Universal Commerce Protocol?</h2>
+                <p class="module-subtitle">The open standard that enables AI agents to conduct commerce on behalf of consumers</p>
+                <p class="module-context"><strong>Why This Matters:</strong> Enterprise merchants who move first on UCP gain exclusive access to billions of AI assistant interactions happening daily.</p>
+            </div>
+            
+            <!-- Proof Point Banner -->
+            <div class="proof-banner">
+                <div class="proof-icon">📈</div>
+                <div class="proof-content">
+                    <strong>AI Shopping is Already Happening:</strong> Since January 2025, Shopify stores have seen <span class="proof-highlight">9X increase in AI traffic</span>, <span class="proof-highlight">14X increase in orders from AI searches</span>, and shops receiving AI traffic have <span class="proof-highlight">doubled</span>. This isn't hype—merchants who aren't showing up in AI conversations are already missing sales.
+                </div>
+            </div>
+
+            <div class="overview-grid">
+                <div class="overview-main">
+                    <div class="content-block">
+                        <h3>The Vision</h3>
+                        <p>UCP is an <strong>open standard</strong> co-developed by Shopify, Google, and other industry leaders that creates a common language for AI agents to interact with commerce infrastructure.</p>
+                        <p>Instead of building custom integrations for each AI platform, merchants expose UCP-compliant endpoints that any agent can consume—enabling frictionless discovery, purchasing, and post-purchase experiences.</p>
+                    </div>
+                    
+                    <div class="content-block highlight-block">
+                        <div class="highlight-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                            </svg>
+                        </div>
+                        <div class="highlight-content">
+                            <h4>Shopify's Role</h4>
+                            <p>Shopify is a <strong>Foundation Partner</strong> of UCP, having co-designed the specification and built native support into our platform. Every Shopify merchant can become UCP-ready without code changes.</p>
+                        </div>
+                    </div>
+
+                    <div class="content-block">
+                        <h3>Why Now?</h3>
+                        <div class="timeline" id="ucp-timeline">
+                            <div class="timeline-item" data-year="2024">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <span class="timeline-date">2024</span>
+                                    <h4>AI Shopping Agents Emerge</h4>
+                                    <p>ChatGPT, Copilot, and other AI assistants begin handling commerce queries</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item" data-year="2025">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <span class="timeline-date">2025</span>
+                                    <h4>Protocol Development</h4>
+                                    <p>Industry leaders collaborate on standardizing agent-commerce interactions</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item active" data-year="2026">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <span class="timeline-date">Jan 2026</span>
+                                    <h4>NRF Launch</h4>
+                                    <p>UCP officially launches with Google and Shopify as primary partners</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item" data-year="future">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <span class="timeline-date">Future</span>
+                                    <h4>Universal Adoption</h4>
+                                    <p>AI agents become the primary interface for commerce discovery</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="overview-sidebar">
+                    <div class="info-card">
+                        <h4>Foundation Standards</h4>
+                        <ul class="standard-list">
+                            <li>
+                                <span class="standard-name">REST + JSON-RPC</span>
+                                <span class="standard-desc">API Communication</span>
+                            </li>
+                            <li>
+                                <span class="standard-name">AP2</span>
+                                <span class="standard-desc">Agent Payments Protocol</span>
+                            </li>
+                            <li>
+                                <span class="standard-name">A2A</span>
+                                <span class="standard-desc">Agent-to-Agent Protocol</span>
+                            </li>
+                            <li>
+                                <span class="standard-name">MCP</span>
+                                <span class="standard-desc">Model Context Protocol</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card quiz-card">
+                        <h4>Knowledge Check</h4>
+                        <div class="quiz" id="overview-quiz">
+                            <div class="quiz-question active" data-question="1">
+                                <p>What type of standard is UCP?</p>
+                                <div class="quiz-options">
+                                    <button class="quiz-option" data-correct="false">Proprietary Shopify standard</button>
+                                    <button class="quiz-option" data-correct="true">Open industry standard</button>
+                                    <button class="quiz-option" data-correct="false">Google-owned protocol</button>
+                                </div>
+                                <div class="quiz-feedback" aria-live="polite" role="status"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 2: Capabilities -->
+    <section class="module module-alt" id="capabilities" role="region" aria-labelledby="capabilities-title">
+        <div class="container">
+            <div class="module-header">
+                <span class="module-number">02</span>
+                <h2 class="module-title" id="capabilities-title">Core Capabilities Deep Dive</h2>
+                <p class="module-subtitle">Three foundational capabilities that power the entire agentic commerce experience</p>
+                <p class="module-context"><strong>Why This Matters:</strong> Each capability addresses a specific merchant pain point—from checkout friction to WISMO tickets to agent security concerns.</p>
+            </div>
+
+            <div class="capabilities-grid">
+                <!-- Checkout Capability -->
+                <div class="capability-card" data-capability="checkout">
+                    <div class="capability-header">
+                        <div class="capability-icon checkout-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </div>
+                        <h3>Checkout Capability</h3>
+                        <span class="capability-status">Core</span>
+                    </div>
+                    <div class="capability-summary">
+                        <p>Enables AI agents to create, update, and complete checkouts on behalf of consumers with full cart functionality.</p>
+                    </div>
+                    <button class="capability-expand" aria-expanded="false">
+                        <span>View Details</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="capability-details">
+                        <div class="detail-section">
+                            <h4>Technical Features</h4>
+                            <ul>
+                                <li>Complex cart logic with line item properties</li>
+                                <li>Dynamic pricing and automatic discounts</li>
+                                <li>Tax calculations by jurisdiction</li>
+                                <li>Shipping rate queries</li>
+                                <li>Payment mandate handling (AP2)</li>
+                            </ul>
+                        </div>
+                        <div class="detail-section">
+                            <h4>Merchant Benefits</h4>
+                            <ul>
+                                <li>No checkout abandonment—agents complete purchases</li>
+                                <li>Consistent branding via Checkout UI extensions</li>
+                                <li>Full Shopify Payments integration</li>
+                                <li>Automatic fraud protection</li>
+                            </ul>
+                        </div>
+                        <div class="detail-section">
+                            <h4>Demo Scenario</h4>
+                            <p class="demo-scenario">"Show how a customer asks Claude to reorder their favorite skincare products. The agent queries the catalog, builds a cart with their preferences, applies their loyalty discount, and completes checkout—all in one conversation."</p>
+                        </div>
+                        <div class="code-preview">
+                            <div class="code-header">
+                                <span>UCP Checkout Request</span>
+                                <button class="copy-btn" data-copy="checkout-code">Copy</button>
+                            </div>
+                            <pre><code id="checkout-code">{
+  "jsonrpc": "2.0",
+  "method": "checkout/create",
+  "params": {
+    "cart": {
+      "lines": [
+        {
+          "merchandiseId": "gid://shopify/ProductVariant/123",
+          "quantity": 2
+        }
+      ]
+    },
+    "buyerIdentity": {
+      "email": "customer@example.com"
+    }
+  }
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Identity Linking Capability -->
+                <div class="capability-card" data-capability="identity">
+                    <div class="capability-header">
+                        <div class="capability-icon identity-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <h3>Identity Linking</h3>
+                        <span class="capability-status">Core</span>
+                    </div>
+                    <div class="capability-summary">
+                        <p>Establishes secure, authenticated relationships between AI agents and merchant accounts using OAuth 2.0.</p>
+                    </div>
+                    <button class="capability-expand" aria-expanded="false">
+                        <span>View Details</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="capability-details">
+                        <div class="detail-section">
+                            <h4>Technical Features</h4>
+                            <ul>
+                                <li>OAuth 2.0 authorization flow</li>
+                                <li>Verifiable credentials for agent identity</li>
+                                <li>Scoped permissions (read-only vs transactional)</li>
+                                <li>Customer account linking</li>
+                                <li>Session persistence across conversations</li>
+                            </ul>
+                        </div>
+                        <div class="detail-section">
+                            <h4>Merchant Benefits</h4>
+                            <ul>
+                                <li>Know which agents are transacting</li>
+                                <li>Control permission levels per agent</li>
+                                <li>Customer data stays secure</li>
+                                <li>Audit trail for all agent actions</li>
+                            </ul>
+                        </div>
+                        <div class="detail-section">
+                            <h4>Demo Scenario</h4>
+                            <p class="demo-scenario">"Walk through the one-time setup where a merchant authorizes Google's shopping agent. Show the permission scopes they can grant and how the merchant maintains control."</p>
+                        </div>
+                        <div class="code-preview">
+                            <div class="code-header">
+                                <span>Identity Link Flow</span>
+                                <button class="copy-btn" data-copy="identity-code">Copy</button>
+                            </div>
+                            <pre><code id="identity-code">{
+  "jsonrpc": "2.0",
+  "method": "identity/link",
+  "params": {
+    "agentId": "agent://google/shopping",
+    "scopes": ["catalog:read", "checkout:write"],
+    "credentials": {
+      "type": "VerifiableCredential",
+      "issuer": "did:web:google.com"
+    }
+  }
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Capability -->
+                <div class="capability-card" data-capability="order">
+                    <div class="capability-header">
+                        <div class="capability-icon order-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                        </div>
+                        <h3>Order Capability</h3>
+                        <span class="capability-status">Core</span>
+                    </div>
+                    <div class="capability-summary">
+                        <p>Powers post-purchase experiences including order status, tracking updates, returns, and customer support.</p>
+                    </div>
+                    <button class="capability-expand" aria-expanded="false">
+                        <span>View Details</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="capability-details">
+                        <div class="detail-section">
+                            <h4>Technical Features</h4>
+                            <ul>
+                                <li>Real-time order status queries</li>
+                                <li>Tracking information aggregation</li>
+                                <li>Return/exchange initiation</li>
+                                <li>Webhook subscriptions for updates</li>
+                                <li>Order history access</li>
+                            </ul>
+                        </div>
+                        <div class="detail-section">
+                            <h4>Merchant Benefits</h4>
+                            <ul>
+                                <li>Reduced WISMO support tickets</li>
+                                <li>Proactive customer communication</li>
+                                <li>Self-service returns via AI</li>
+                                <li>Increased customer satisfaction</li>
+                            </ul>
+                        </div>
+                        <div class="detail-section">
+                            <h4>Demo Scenario</h4>
+                            <p class="demo-scenario">"Customer asks their AI assistant 'Where's my order from [Brand]?' The agent queries order status, provides tracking, and proactively offers to notify when delivered."</p>
+                        </div>
+                        <div class="code-preview">
+                            <div class="code-header">
+                                <span>Order Status Query</span>
+                                <button class="copy-btn" data-copy="order-code">Copy</button>
+                            </div>
+                            <pre><code id="order-code">{
+  "jsonrpc": "2.0",
+  "method": "order/status",
+  "params": {
+    "orderId": "gid://shopify/Order/456",
+    "include": ["fulfillments", "tracking", "returns"]
+  }
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Diagram -->
+            <div class="capabilities-diagram">
+                <h3>How It All Connects</h3>
+                <div class="diagram-container" id="capabilities-diagram">
+                    <!-- SVG inserted via JS -->
+                </div>
+            </div>
+            
+            <!-- Architecture Deep-Dive (from Shopify Engineering) -->
+            <div class="architecture-section full-width">
+                <div class="section-header">
+                    <h3>Protocol Architecture Deep-Dive</h3>
+                    <p>From <a href="https://shopify.engineering/ucp" target="_blank">Shopify Engineering Blog</a> by Ilya Grigorik</p>
+                </div>
+                
+                <div class="architecture-grid">
+                    <!-- Layered Protocol -->
+                    <div class="arch-card">
+                        <div class="arch-icon">📐</div>
+                        <h4>Layered Protocol Design</h4>
+                        <p>UCP separates responsibilities into composable layers:</p>
+                        <div class="arch-layers">
+                            <div class="arch-layer layer-1">
+                                <span class="layer-label">Extensions</span>
+                                <span class="layer-desc">Domain-specific schemas (fulfillment, loyalty, etc.)</span>
+                            </div>
+                            <div class="arch-layer layer-2">
+                                <span class="layer-label">Capabilities</span>
+                                <span class="layer-desc">Checkout, Orders, Catalog—independently versioned</span>
+                            </div>
+                            <div class="arch-layer layer-3">
+                                <span class="layer-label">Shopping Service</span>
+                                <span class="layer-desc">Core primitives: checkout session, line items, totals</span>
+                            </div>
+                        </div>
+                        <p class="arch-quote">"Monolithic protocols collapse under complexity. Layered protocols survive and thrive."</p>
+                    </div>
+                    
+                    <!-- Open Bazaar -->
+                    <div class="arch-card">
+                        <div class="arch-icon">🏪</div>
+                        <h4>Open Bazaar of Capabilities</h4>
+                        <p>No central registry, no approval committees. UCP uses <strong>reverse-domain naming</strong>:</p>
+                        <ul class="arch-list">
+                            <li><code>dev.ucp.shopping.*</code> → hosted at ucp.dev</li>
+                            <li><code>com.loyaltyprovider.*</code> → owned by loyaltyprovider.com</li>
+                            <li><code>com.yourvendor.custom</code> → your custom extensions</li>
+                        </ul>
+                        <p class="arch-highlight">Own the domain, own the namespace. Extensions grow without integration meetings.</p>
+                    </div>
+                    
+                    <!-- Checkout State Machine -->
+                    <div class="arch-card">
+                        <div class="arch-icon">🔄</div>
+                        <h4>Checkout State Machine</h4>
+                        <p>UCP models human-agent collaboration through checkout states:</p>
+                        <div class="state-machine">
+                            <div class="state state-incomplete">
+                                <span class="state-name">incomplete</span>
+                                <span class="state-desc">Missing info—agent resolves via API</span>
+                            </div>
+                            <div class="state-arrow">→</div>
+                            <div class="state state-escalation">
+                                <span class="state-name">requires_escalation</span>
+                                <span class="state-desc">Buyer input needed—handoff via continue_url</span>
+                            </div>
+                            <div class="state-arrow">→</div>
+                            <div class="state state-ready">
+                                <span class="state-name">ready_for_complete</span>
+                                <span class="state-desc">All info collected—finalize programmatically</span>
+                            </div>
+                        </div>
+                        <p class="arch-quote">"No transaction is ever left behind: when an agent hits a capability gap, the protocol routes around it."</p>
+                    </div>
+                    
+                    <!-- ECP -->
+                    <div class="arch-card">
+                        <div class="arch-icon">🔗</div>
+                        <h4>Embedded Checkout Protocol (ECP)</h4>
+                        <p>When escalation is required, ECP makes handoffs seamless:</p>
+                        <ul class="arch-list">
+                            <li>Bi-directional JSON-RPC 2.0 messaging</li>
+                            <li>Checkout embedded in agent's surface</li>
+                            <li>Native payment sheet via delegation</li>
+                            <li>Wallet address selection from agent</li>
+                            <li>PCIv4 compliance sandboxing</li>
+                        </ul>
+                        <p class="arch-highlight">Born from Shopify's Checkout Kit—years of operating embedded checkout at scale.</p>
+                    </div>
+                    
+                    <!-- Payment Negotiation -->
+                    <div class="arch-card full-width">
+                        <div class="arch-icon">💳</div>
+                        <h4>Two-Sided Payment Negotiation</h4>
+                        <p>Merchants have PSP relationships; buyers have preferences. UCP lets both sides express what they want, then dynamically negotiates per transaction.</p>
+                        <div class="payment-flow">
+                            <div class="payment-side">
+                                <h5>Merchant Profile</h5>
+                                <code>handlers: ["shop_pay", "google_pay", "apple_pay"]</code>
+                            </div>
+                            <div class="payment-negotiate">
+                                <span>⚡ Dynamic Negotiation</span>
+                                <span class="negotiate-desc">Cart, buyer location, amount</span>
+                            </div>
+                            <div class="payment-side">
+                                <h5>Agent Profile</h5>
+                                <code>credentials: ["google_pay", "stored_card"]</code>
+                            </div>
+                        </div>
+                        <p class="arch-quote">"Payment handlers, like capabilities, invert the usual integration burden. New payment methods grow into the ecosystem without committee votes."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 3: Enterprise Playbook -->
+    <section class="module" id="enterprise" role="region" aria-labelledby="enterprise-title">
+        <div class="container">
+            <div class="module-header">
+                <span class="module-number">03</span>
+                <h2 class="module-title" id="enterprise-title">Enterprise Playbook</h2>
+                <p class="module-subtitle">Position UCP for enterprise lifestyle brands with confidence</p>
+                <p class="module-context"><strong>Why This Matters:</strong> Your next discovery call is an opportunity to differentiate Shopify as the only platform with production-ready AI commerce.</p>
+            </div>
+
+            <div class="enterprise-grid">
+                <!-- Readiness Calculator -->
+                <div class="enterprise-section calculator-section">
+                    <div class="section-header">
+                        <h3>Agentic Commerce Readiness Assessment</h3>
+                        <p>Evaluate your merchant's readiness for UCP adoption</p>
+                    </div>
+                    <div class="calculator" id="readiness-calculator">
+                        <div class="calculator-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="calc-progress"></div>
+                            </div>
+                            <span class="progress-text">Question <span id="current-q">1</span> of 8</span>
+                        </div>
+                        <div class="calculator-questions">
+                            <div class="calc-question active" data-question="1">
+                                <h4>What is the merchant's current checkout conversion rate?</h4>
+                                <div class="calc-options">
+                                    <button class="calc-option" data-score="3">Above 3.5%</button>
+                                    <button class="calc-option" data-score="2">2.5% - 3.5%</button>
+                                    <button class="calc-option" data-score="1">Below 2.5%</button>
+                                </div>
+                            </div>
+                            <div class="calc-question" data-question="2">
+                                <h4>Does the merchant have Shopify Payments enabled?</h4>
+                                <div class="calc-options">
+                                    <button class="calc-option" data-score="3">Yes, primary processor</button>
+                                    <button class="calc-option" data-score="2">Yes, but not primary</button>
+                                    <button class="calc-option" data-score="1">No</button>
+                                </div>
+                            </div>
+                            <div class="calc-question" data-question="3">
+                                <h4>What is the merchant's mobile traffic percentage?</h4>
+                                <div class="calc-options">
+                                    <button class="calc-option" data-score="3">Above 70%</button>
+                                    <button class="calc-option" data-score="2">50% - 70%</button>
+                                    <button class="calc-option" data-score="1">Below 50%</button>
+                                </div>
+                            </div>
+                            <div class="calc-question" data-question="4">
+                                <h4>How mature is their AI/automation strategy?</h4>
+                                <div class="calc-options">
+                                    <button class="calc-option" data-score="3">Using AI chatbots, personalization</button>
+                                    <button class="calc-option" data-score="2">Exploring AI tools</button>
+                                    <button class="calc-option" data-score="1">No AI initiatives</button>
+                                </div>
+                            </div>
+                            <div class="calc-question" data-question="5">
+                                <h4>What is their customer support ticket volume for order status (WISMO)?</h4>
+                                <div class="calc-options">
+                                    <button class="calc-option" data-score="3">High (pain point)</button>
+                                    <button class="calc-option" data-score="2">Moderate</button>
+                                    <button class="calc-option" data-score="1">Low</button>
+                                </div>
+                            </div>
+                            <div class="calc-question" data-question="6">
+                                <h4>Does the merchant sell subscription or replenishment products?</h4>
+                                <div class="calc-options">
+                                    <button class="calc-option" data-score="3">Yes, significant revenue</button>
+                                    <button class="calc-option" data-score="2">Some subscription products</button>
+                                    <button class="calc-option" data-score="1">No subscriptions</button>
+                                </div>
+                            </div>
+                            <div class="calc-question" data-question="7">
+                                <h4>Is the merchant in the US market?</h4>
+                                <div class="calc-options">
+                                    <button class="calc-option" data-score="3">Yes, US primary market</button>
+                                    <button class="calc-option" data-score="2">US is significant market</button>
+                                    <button class="calc-option" data-score="1">No US presence</button>
+                                </div>
+                            </div>
+                            <div class="calc-question" data-question="8">
+                                <h4>What is their competitive pressure on innovation?</h4>
+                                <div class="calc-options">
+                                    <button class="calc-option" data-score="3">High - competitors innovating</button>
+                                    <button class="calc-option" data-score="2">Moderate</button>
+                                    <button class="calc-option" data-score="1">Low - market leader</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calculator-result" id="calc-result" aria-live="polite" aria-atomic="true">
+                            <div class="result-score">
+                                <div class="score-ring">
+                                    <svg viewBox="0 0 100 100">
+                                        <circle class="score-bg" cx="50" cy="50" r="45"/>
+                                        <circle class="score-fill" cx="50" cy="50" r="45" id="score-circle"/>
+                                    </svg>
+                                    <span class="score-value" id="score-value">0</span>
+                                </div>
+                                <div class="score-label" id="score-label">Calculating...</div>
+                            </div>
+                            <div class="result-details" id="result-details">
+                                <!-- Populated by JS -->
+                            </div>
+                            <button class="btn btn-secondary" id="restart-calc">Restart Assessment</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Positioning Guide -->
+                <div class="enterprise-section">
+                    <div class="section-header">
+                        <h3>Enterprise Positioning</h3>
+                        <p>Key messages for lifestyle brand conversations</p>
+                    </div>
+                    <div class="positioning-cards">
+                        <div class="positioning-card">
+                            <div class="positioning-icon">🎯</div>
+                            <h4>Value Proposition</h4>
+                            <p>"UCP transforms your checkout from a conversion funnel to a <strong>conversation endpoint</strong>. Your brand becomes accessible wherever AI assistants operate."</p>
+                        </div>
+                        <div class="positioning-card">
+                            <div class="positioning-icon">🔒</div>
+                            <h4>Security Messaging</h4>
+                            <p>"Every agent transaction uses verifiable credentials and payment mandates. <strong>You maintain full control</strong> over which agents can transact and at what level."</p>
+                        </div>
+                        <div class="positioning-card">
+                            <div class="positioning-icon">⚡</div>
+                            <h4>Speed to Market</h4>
+                            <p>"Unlike SFCC or custom builds, Shopify merchants get UCP <strong>out of the box</strong>. No development required—just enable and go live."</p>
+                        </div>
+                        <div class="positioning-card">
+                            <div class="positioning-icon">📊</div>
+                            <h4>ROI Framework</h4>
+                            <p>"Measure impact through <strong>incremental orders</strong> from AI channels, <strong>reduced WISMO tickets</strong>, and <strong>higher repeat purchase rates</strong> from seamless experiences."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live Merchants -->
+                <div class="enterprise-section full-width">
+                    <div class="section-header">
+                        <h3>Live Now: Merchants on Agentic Channels</h3>
+                        <p>Real brands already selling through AI assistants</p>
+                    </div>
+                    <div class="live-merchants-grid">
+                        <div class="merchant-channel">
+                            <div class="channel-header">
+                                <span class="channel-logo google">G</span>
+                                <h4>Google AI Mode & Gemini</h4>
+                                <span class="channel-status live">Rolling out mid-Jan</span>
+                            </div>
+                            <div class="merchant-list">
+                                <span class="merchant-badge">Monos</span>
+                                <span class="merchant-badge">Gymshark</span>
+                                <span class="merchant-badge">Everlane</span>
+                            </div>
+                            <div class="channel-fee">
+                                <span class="fee-label">Platform Fee:</span>
+                                <span class="fee-value free">None</span>
+                            </div>
+                        </div>
+                        <div class="merchant-channel">
+                            <div class="channel-header">
+                                <span class="channel-logo microsoft">M</span>
+                                <h4>Microsoft Copilot Checkout</h4>
+                                <span class="channel-status live pulse">Live Now</span>
+                            </div>
+                            <div class="merchant-list">
+                                <span class="merchant-badge">KEEN</span>
+                                <span class="merchant-badge">Pura Vida</span>
+                                <span class="merchant-badge">Kyte Baby</span>
+                            </div>
+                            <div class="channel-fee">
+                                <span class="fee-label">Platform Fee:</span>
+                                <span class="fee-value free">None</span>
+                            </div>
+                        </div>
+                        <div class="merchant-channel">
+                            <div class="channel-header">
+                                <span class="channel-logo chatgpt">⬡</span>
+                                <h4>ChatGPT Shopping</h4>
+                                <span class="channel-status live">26+ Brands Live</span>
+                            </div>
+                            <div class="merchant-list">
+                                <span class="merchant-badge">Glossier</span>
+                                <span class="merchant-badge">Skims</span>
+                                <span class="merchant-badge">Spanx</span>
+                                <span class="merchant-badge more">+23 more</span>
+                            </div>
+                            <div class="channel-fee">
+                                <span class="fee-label">Platform Fee:</span>
+                                <span class="fee-value">4% <small>(OpenAI's fee)</small></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rollout-note">
+                        <strong>📢 Rollout:</strong> US merchants will be enabled in cohorts starting end of January. Eligible merchants receive email with updated Agentic Storefronts Terms of Service. Merchants have opt-out period before AI channels are enabled.
+                    </div>
+                </div>
+
+                <!-- Data Privacy & Security -->
+                <div class="enterprise-section full-width">
+                    <div class="section-header">
+                        <h3>Data Privacy & Security</h3>
+                        <p>How customer and product data is protected in AI commerce</p>
+                    </div>
+                    <div class="privacy-grid">
+                        <div class="privacy-card">
+                            <div class="privacy-icon safe">✓</div>
+                            <h4>Product Data</h4>
+                            <p><strong>Shared with AI partners</strong> for discovery and recommendation—similar to Google Shopping. Includes titles, descriptions, prices, images, and inventory status.</p>
+                        </div>
+                        <div class="privacy-card">
+                            <div class="privacy-icon protected">🔒</div>
+                            <h4>Customer Data</h4>
+                            <p><strong>NOT shared with AI partners</strong>—transactions process through Shop Pay. Customer PII stays within Shopify's secure infrastructure.</p>
+                        </div>
+                        <div class="privacy-card">
+                            <div class="privacy-icon protected">🔒</div>
+                            <h4>Order Data</h4>
+                            <p><strong>Stays in Shopify admin</strong>—AI partners only see order confirmation status. Full transaction history remains merchant-controlled.</p>
+                        </div>
+                        <div class="privacy-card">
+                            <div class="privacy-icon protected">🔒</div>
+                            <h4>AI Training</h4>
+                            <p><strong>Customer PII is NOT used</strong> to train AI models. Only aggregated, anonymized data patterns are used—never individual customer data. Full GDPR/CCPA compliance.</p>
+                        </div>
+                    </div>
+                    <div class="privacy-note">
+                        <strong>📋 Compliance:</strong> All data sharing governed by updated Agentic Storefronts Terms of Service. Merchants must accept before enablement.
+                    </div>
+                </div>
+
+                <!-- Business Model & Fees -->
+                <div class="enterprise-section full-width">
+                    <div class="section-header">
+                        <h3>Business Model & Fees</h3>
+                        <p>Transparent pricing for AI commerce channels</p>
+                    </div>
+                    <div class="fees-table-wrapper">
+                        <table class="fees-table">
+                            <thead>
+                                <tr>
+                                    <th>Fee Type</th>
+                                    <th>Amount</th>
+                                    <th>Notes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Shopify Platform Fee</strong></td>
+                                    <td class="fee-highlight">None</td>
+                                    <td>No additional fees for Plus/Enterprise merchants</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Google AI Mode / Gemini</strong></td>
+                                    <td class="fee-highlight">None</td>
+                                    <td>Foundation partner—no fees at launch</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Microsoft Copilot</strong></td>
+                                    <td class="fee-highlight">None</td>
+                                    <td>No platform fees currently</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>ChatGPT (OpenAI)</strong></td>
+                                    <td>4%</td>
+                                    <td>OpenAI's fee, not Shopify's</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Shop Pay Processing</strong></td>
+                                    <td>Standard</td>
+                                    <td>Same processing fees as regular checkout</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="fees-note">
+                        <strong>💡 Key Point:</strong> This is channel expansion, not revenue extraction. Shopify makes money when merchants grow—we're not adding intermediary fees.
+                    </div>
+                </div>
+
+                <!-- Competitive Differentiation -->
+                <div class="enterprise-section full-width">
+                    <div class="section-header">
+                        <h3>Competitive Differentiation</h3>
+                        <p>How Shopify + UCP compares to alternatives</p>
+                    </div>
+                    <div class="comparison-table-wrapper">
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Capability</th>
+                                    <th class="highlight">Shopify + UCP</th>
+                                    <th>SFCC</th>
+                                    <th>BigCommerce</th>
+                                    <th>Custom Build</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Native UCP Support</td>
+                                    <td class="highlight"><span class="check">✓</span> Built-in</td>
+                                    <td><span class="partial">~</span> Requires integration</td>
+                                    <td><span class="cross">✗</span> Not available</td>
+                                    <td><span class="partial">~</span> Must implement</td>
+                                </tr>
+                                <tr>
+                                    <td>Time to Enable</td>
+                                    <td class="highlight"><span class="check">✓</span> Days</td>
+                                    <td><span class="partial">~</span> Months</td>
+                                    <td><span class="cross">✗</span> N/A</td>
+                                    <td><span class="cross">✗</span> 6-12 months</td>
+                                </tr>
+                                <tr>
+                                    <td>Google Partnership</td>
+                                    <td class="highlight"><span class="check">✓</span> Foundation Partner</td>
+                                    <td><span class="cross">✗</span> No</td>
+                                    <td><span class="cross">✗</span> No</td>
+                                    <td><span class="cross">✗</span> No</td>
+                                </tr>
+                                <tr>
+                                    <td>Checkout Branding</td>
+                                    <td class="highlight"><span class="check">✓</span> Full customization</td>
+                                    <td><span class="check">✓</span> Full</td>
+                                    <td><span class="partial">~</span> Limited</td>
+                                    <td><span class="check">✓</span> Full</td>
+                                </tr>
+                                <tr>
+                                    <td>Post-Purchase (Order)</td>
+                                    <td class="highlight"><span class="check">✓</span> Native webhooks</td>
+                                    <td><span class="partial">~</span> Custom dev</td>
+                                    <td><span class="cross">✗</span> N/A</td>
+                                    <td><span class="partial">~</span> Must build</td>
+                                </tr>
+                                <tr>
+                                    <td>Agent Identity</td>
+                                    <td class="highlight"><span class="check">✓</span> OAuth 2.0 + VC</td>
+                                    <td><span class="cross">✗</span> No standard</td>
+                                    <td><span class="cross">✗</span> No standard</td>
+                                    <td><span class="partial">~</span> Must implement</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Integration Considerations -->
+                <div class="enterprise-section">
+                    <div class="section-header">
+                        <h3>Integration Considerations</h3>
+                        <p>What enterprise merchants should know</p>
+                    </div>
+                    <div class="integration-grid">
+                        <div class="integration-item">
+                            <div class="integration-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                                </svg>
+                            </div>
+                            <h4>ERP Integration</h4>
+                            <p>UCP orders flow through standard Shopify order APIs. Existing ERP integrations continue to work—no changes needed.</p>
+                        </div>
+                        <div class="integration-item">
+                            <div class="integration-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                </svg>
+                            </div>
+                            <h4>OMS Compatibility</h4>
+                            <p>Order Management Systems receive UCP orders like any other channel. Attribution tags identify agent-originated transactions.</p>
+                        </div>
+                        <div class="integration-item">
+                            <div class="integration-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                                </svg>
+                            </div>
+                            <h4>PIM Sync</h4>
+                            <p>Product catalogs exposed via UCP use existing PIM data. Rich attributes enhance agent product discovery.</p>
+                        </div>
+                        <div class="integration-item">
+                            <div class="integration-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                </svg>
+                            </div>
+                            <h4>Compliance</h4>
+                            <p>US market launch (Jan 2026). INFORM Act compliance required. Shopify Payments must be enabled.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 3b: Agentic Plan -->
+    <section class="module module-alt" id="agentic-plan" role="region" aria-labelledby="agentic-plan-title">
+        <div class="container">
+            <!-- Early Access Caveats Banner -->
+            <div class="caveats-banner" role="alert">
+                <div class="caveats-icon">⚠️</div>
+                <div class="caveats-content">
+                    <h4>Q1 2026 Early Access — Key Constraints</h4>
+                    <div class="caveats-grid">
+                        <div class="caveat-item">
+                            <span class="caveat-label">Geography</span>
+                            <span class="caveat-value">US only (US shop → US buyer, no Global-e)</span>
+                        </div>
+                        <div class="caveat-item">
+                            <span class="caveat-label">Payments</span>
+                            <span class="caveat-value">Shopify Payments required <span class="evolving">(3P support coming for Google/Microsoft)</span></span>
+                        </div>
+                        <div class="caveat-item">
+                            <span class="caveat-label">Shop Pay</span>
+                            <span class="caveat-value">Not available in agentic checkouts</span>
+                        </div>
+                        <div class="caveat-item">
+                            <span class="caveat-label">Customer Accounts</span>
+                            <span class="caveat-value">Must be set to "Optional" (not Required)</span>
+                        </div>
+                        <div class="caveat-item">
+                            <span class="caveat-label">Pricing</span>
+                            <span class="caveat-value">4% agentic commerce fee <span class="evolving">(ChatGPT confirmed; varies by partner)</span></span>
+                        </div>
+                        <div class="caveat-item">
+                            <span class="caveat-label">Shop ID</span>
+                            <span class="caveat-value">Must be distinct from SPC shop (separate integration)</span>
+                        </div>
+                    </div>
+                    <p class="caveats-footer">These constraints apply to the Q1 2026 Early Access program. Some items are evolving—confirm with product team for latest status.</p>
+                </div>
+            </div>
+            
+            <div class="module-header">
+                <span class="module-number">03b</span>
+                <h2 class="module-title" id="agentic-plan-title">Agentic Plan</h2>
+                <p class="module-subtitle">For brands not yet on Shopify—sell across AI channels without migrating your store</p>
+                <p class="module-context"><strong>Why This Matters:</strong> Opens conversations with SFCC and custom platform merchants who aren't ready to migrate but want AI commerce access.</p>
+            </div>
+
+            <div class="agentic-plan-grid">
+                <!-- What Is It -->
+                <div class="plan-section">
+                    <div class="section-header">
+                        <h3>What is Agentic Plan?</h3>
+                        <p>A new way for any brand to access Shopify's AI commerce infrastructure</p>
+                    </div>
+                    <div class="plan-content">
+                        <div class="plan-highlight-box">
+                            <div class="highlight-icon">🚀</div>
+                            <div class="highlight-text">
+                                <strong>The Bottom Line:</strong> Non-Shopify brands can add their products to Shopify Catalog and sell across AI platforms and the Shop app. <em>No Shopify online store required.</em>
+                            </div>
+                        </div>
+                        <div class="plan-features">
+                            <div class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                <span>Set up product data once, syndicate everywhere</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                <span>Access to ChatGPT, Google, Copilot, Perplexity, and Shop app</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                <span>Use existing PIM/OMS integrations—no tech stack changes</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">✓</span>
+                                <span>Every future AI partner Shopify adds, automatically included</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- How It Works -->
+                <div class="plan-section">
+                    <div class="section-header">
+                        <h3>How It Works</h3>
+                        <p>Three steps to AI commerce without replatforming</p>
+                    </div>
+                    <div class="plan-flow">
+                        <div class="flow-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Add Products to Catalog</h4>
+                                <p>Connect your PIM or product feed to Shopify Catalog. Your data stays structured and real-time.</p>
+                            </div>
+                        </div>
+                        <div class="flow-connector"></div>
+                        <div class="flow-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Configure Minimal Settings</h4>
+                                <p>Set up payments (Shopify Payments optional for most channels), shipping, and taxes.</p>
+                            </div>
+                        </div>
+                        <div class="flow-connector"></div>
+                        <div class="flow-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Go Live Across AI Channels</h4>
+                                <p>Shopify syndicates your products to all AI partners. Orders flow back via standard APIs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Why Better Than Scraping -->
+                <div class="plan-section full-width">
+                    <div class="section-header">
+                        <h3>Why This Beats Web Scraping</h3>
+                        <p>Structured data you control vs. AI platforms guessing at your products</p>
+                    </div>
+                    <div class="scraping-comparison">
+                        <div class="comparison-column bad">
+                            <div class="column-header">
+                                <span class="column-icon">❌</span>
+                                <h4>Web Scraping (Amazon, etc.)</h4>
+                            </div>
+                            <ul>
+                                <li>AI platforms guess at product data</li>
+                                <li>Incomplete titles, variants, pricing</li>
+                                <li>Stale inventory information</li>
+                                <li>No brand voice or FAQs</li>
+                                <li>Products appear without your approval</li>
+                                <li>No control over presentation</li>
+                            </ul>
+                        </div>
+                        <div class="comparison-column good">
+                            <div class="column-header">
+                                <span class="column-icon">✓</span>
+                                <h4>Agentic Plan (Shopify Catalog)</h4>
+                            </div>
+                            <ul>
+                                <li>Structured, verified product data</li>
+                                <li>Real-time inventory and pricing</li>
+                                <li>Rich attributes enhance discovery</li>
+                                <li>Knowledge Base maintains brand voice</li>
+                                <li>You opt in—full control</li>
+                                <li>Define how products appear via Default Listing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Talk Track -->
+                <div class="plan-section">
+                    <div class="section-header">
+                        <h3>Talk Track: Non-Shopify Merchants</h3>
+                        <p>How to position Agentic Plan to brands on other platforms</p>
+                    </div>
+                    <div class="plan-talk-track">
+                        <div class="talk-track-card">
+                            <h4>Opening</h4>
+                            <blockquote>
+                                "I know you're not ready to change platforms, and that's fine. But AI shopping is happening now—consumers are already asking ChatGPT and Google to find products for them. Agentic Plan lets you show up in those conversations without changing your online store."
+                            </blockquote>
+                        </div>
+                        <div class="talk-track-card">
+                            <h4>Value Prop</h4>
+                            <blockquote>
+                                "You'd have to build separate integrations for ChatGPT, Google, Copilot, and every new AI platform. With Agentic Plan, you set it up once and Shopify syndicates to all of them. One integration. Automatic updates. No platform-by-platform work."
+                            </blockquote>
+                        </div>
+                        <div class="talk-track-card">
+                            <h4>Addressing Lock-In Fear</h4>
+                            <blockquote>
+                                "This isn't a lock-in play. It's a way to get you into AI commerce now—without forcing a platform decision. If you want to stay on your current platform, you can. If you eventually decide Shopify is the right move, the door's open. No pressure."
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Availability -->
+                <div class="plan-section">
+                    <div class="section-header">
+                        <h3>Availability & Next Steps</h3>
+                        <p>Current rollout status and how to engage</p>
+                    </div>
+                    <div class="availability-timeline">
+                        <div class="timeline-item current">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-label">Now</span>
+                                <h4>Enterprise Beta</h4>
+                                <p>Small cohort of enterprise merchants. Limited sales rep engagement.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-label">Q1 2026</span>
+                                <h4>Expanded Access</h4>
+                                <p>Additional enterprise merchants onboarded. Pricing confirmed.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-label">Later 2026</span>
+                                <h4>General Availability</h4>
+                                <p>Open to all qualifying brands across markets.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cta-box">
+                        <p><strong>Interested Merchants:</strong> Direct them to <a href="https://www.shopify.com/agentic-plan" target="_blank">shopify.com/agentic-plan</a> to join the waitlist.</p>
+                    </div>
+                </div>
+
+                <!-- Technical Integration Requirements -->
+                <div class="plan-section full-width">
+                    <div class="section-header">
+                        <h3>Technical Integration Requirements</h3>
+                        <p>What merchants need to know about catalog setup and data sync</p>
+                    </div>
+                    
+                    <!-- Product Data Model -->
+                    <div class="tech-subsection">
+                        <h4>Product Data Model</h4>
+                        <p class="subsection-intro">Shopify's product structure for Agentic Plan follows these limits:</p>
+                        <div class="data-model-grid">
+                            <div class="data-model-card">
+                                <div class="model-icon">📦</div>
+                                <h5>Products</h5>
+                                <p>Parent items representing a single sellable good</p>
+                                <span class="limit-badge">Unlimited</span>
+                            </div>
+                            <div class="data-model-card">
+                                <div class="model-icon">🎨</div>
+                                <h5>Options</h5>
+                                <p>Attributes defining variation (Color, Size, Material)</p>
+                                <span class="limit-badge">3 per product</span>
+                            </div>
+                            <div class="data-model-card">
+                                <div class="model-icon">🏷️</div>
+                                <h5>Variants</h5>
+                                <p>SKU-level combinations with own price, inventory, images</p>
+                                <span class="limit-badge">2,048 per product</span>
+                            </div>
+                        </div>
+                        <div class="data-model-note">
+                            <strong>More than 3 options?</strong> Use Default Schema to group related products. A jacket in 4 colors, 5 sizes, and 3 sleeve lengths becomes 4 products (one per color) grouped via metafield.
+                        </div>
+                    </div>
+
+                    <!-- Required Fields Table -->
+                    <div class="tech-subsection">
+                        <h4>Required Fields for Catalog Sync</h4>
+                        <div class="table-wrapper">
+                            <table class="requirements-table">
+                                <thead>
+                                    <tr>
+                                        <th>Field</th>
+                                        <th>Source</th>
+                                        <th>Notes</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code>title</code></td>
+                                        <td>title</td>
+                                        <td>Product name as displayed to customers</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>description</code></td>
+                                        <td>descriptionHtml</td>
+                                        <td>Product description (HTML supported)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>image</code></td>
+                                        <td>images</td>
+                                        <td>At least one per product; one per variant recommended</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>price</code></td>
+                                        <td>variants.price</td>
+                                        <td>Current selling price in USD</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>inventory</code></td>
+                                        <td>inventoryQuantity</td>
+                                        <td>Available stock (zero inventory = excluded)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>weight</code></td>
+                                        <td>variants.weight</td>
+                                        <td>Required for shipping calculation</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>product_url</code></td>
+                                        <td>Metafield</td>
+                                        <td>Fallback link for web checkout</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Data Lifecycle -->
+                    <div class="tech-subsection">
+                        <h4>Data Lifecycle & Sync Timing</h4>
+                        <div class="lifecycle-grid">
+                            <div class="lifecycle-item">
+                                <div class="lifecycle-icon sync">🔄</div>
+                                <div class="lifecycle-content">
+                                    <h5>Product Feed</h5>
+                                    <span class="timing">Pushed every 24 hours</span>
+                                    <p>Title, description, images, taxonomy. Builds AI search index. Partners can pull on their own schedule.</p>
+                                </div>
+                            </div>
+                            <div class="lifecycle-item">
+                                <div class="lifecycle-icon realtime">⚡</div>
+                                <div class="lifecycle-content">
+                                    <h5>Price & Inventory</h5>
+                                    <span class="timing">Real-time lookup</span>
+                                    <p>Checked when customer views product in AI conversation.</p>
+                                </div>
+                            </div>
+                            <div class="lifecycle-item">
+                                <div class="lifecycle-icon checkout">💳</div>
+                                <div class="lifecycle-content">
+                                    <h5>Discounts</h5>
+                                    <span class="timing">Real-time at checkout</span>
+                                    <p>Automatic discounts applied when checkout initiates.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="best-practices-box">
+                            <h5>Best Practices</h5>
+                            <ul>
+                                <li><strong>Inventory:</strong> Sync every 10–30 minutes for accurate availability</li>
+                                <li><strong>Promotions:</strong> Publish automatic discounts 5+ minutes before announced start time</li>
+                                <li><strong>New products:</strong> Allow up to 24 hours to appear in AI search results</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Integration Partners -->
+                    <div class="tech-subsection">
+                        <h4>Integration Partners</h4>
+                        <p class="subsection-intro">Pre-built integrations for enterprise catalog sync:</p>
+                        <div class="partners-grid">
+                            <a href="https://help.plytix.com/en/shopify-connector" target="_blank" class="partner-badge">Plytix</a>
+                            <a href="https://apps.akeneo.com/extension/akeneo-pim-connector-shopify" target="_blank" class="partner-badge">Akeneo</a>
+                            <a href="https://apps.shopify.com/salsify" target="_blank" class="partner-badge">Salsify</a>
+                            <a href="https://www.productsup.com/featured-integrations/shopify/" target="_blank" class="partner-badge">ProductsUp</a>
+                            <a href="https://www.rithum.com/resources/shopify-integration-with-rithum/" target="_blank" class="partner-badge">Rithum</a>
+                            <a href="https://apps.shopify.com/excel-export-import" target="_blank" class="partner-badge">Matrixify</a>
+                        </div>
+                        <div class="api-highlight">
+                            <span class="highlight-label">Enterprise Benefit:</span>
+                            <span class="highlight-text">Agentic Plan includes <strong>10X standard API rate limits</strong>, supporting thousands of SKU updates per minute.</span>
+                        </div>
+                    </div>
+
+                    <!-- Checkout Limitations -->
+                    <div class="tech-subsection">
+                        <h4>Checkout Capabilities & Limitations</h4>
+                        <p class="subsection-intro">Critical for SE positioning—know what works and what doesn't in embedded agentic checkout:</p>
+                        
+                        <div class="limitations-grid">
+                            <div class="limitations-column supported">
+                                <div class="column-header">
+                                    <span class="status-icon">✓</span>
+                                    <h5>Supported</h5>
+                                </div>
+                                <ul class="limitations-list">
+                                    <li>
+                                        <span class="feature-name">Automatic Discounts</span>
+                                        <span class="feature-note">Up to 25 simultaneous</span>
+                                    </li>
+                                    <li>
+                                        <span class="feature-name">Discount Functions</span>
+                                        <span class="feature-note">Custom discount logic</span>
+                                    </li>
+                                    <li>
+                                        <span class="feature-name">Order Routing Location Rule</span>
+                                        <span class="feature-note">Fulfillment routing</span>
+                                    </li>
+                                    <li>
+                                        <span class="feature-name">Fulfillment Constraints</span>
+                                        <span class="feature-note">Delivery rules</span>
+                                    </li>
+                                    <li>
+                                        <span class="feature-name">Delivery Customization Functions</span>
+                                        <span class="feature-note">Shipping options</span>
+                                    </li>
+                                    <li>
+                                        <span class="feature-name">Shopify Protect</span>
+                                        <span class="feature-note">Fraud protection</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="limitations-column not-supported">
+                                <div class="column-header">
+                                    <span class="status-icon">✗</span>
+                                    <h5>Not Supported (V1)</h5>
+                                </div>
+                                <ul class="limitations-list">
+                                    <li>
+                                        <span class="feature-name">Multi-item carts</span>
+                                        <span class="feature-note">Single item per checkout</span>
+                                    </li>
+                                    <li>
+                                        <span class="feature-name">Discount codes</span>
+                                        <span class="feature-note">No text entry UI</span>
+                                    </li>
+                                    <li>
+                                        <span class="feature-name">Checkout UI Extensions</span>
+                                        <span class="feature-note">Upsells, gift messages</span>
+                                    </li>
+                                    <li>
+                                        <span class="feature-name">Subscriptions</span>
+                                        <span class="feature-note">Selling plans not supported</span>
+                                    </li>
+                                    <li>
+                                        <span class="feature-name">Bundles</span>
+                                        <span class="feature-note">Falls back to web checkout</span>
+                                    </li>
+                                    <li>
+                                        <span class="feature-name">Gift cards / Store credit</span>
+                                        <span class="feature-note">No entry UI</span>
+                                    </li>
+                                    <li>
+                                        <span class="feature-name">3D Secure (3DS)</span>
+                                        <span class="feature-note">Payment challenges unavailable</span>
+                                    </li>
+                                    <li>
+                                        <span class="feature-name">Web pixels</span>
+                                        <span class="feature-note">Analytics events don't fire</span>
+                                    </li>
+                                    <li>
+                                        <span class="feature-name">Marketing opt-in</span>
+                                        <span class="feature-note">No consent UI</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="limitations-note">
+                            <div class="note-icon">💡</div>
+                            <div class="note-content">
+                                <strong>Handling Fallbacks:</strong> When a feature isn't supported (bundles, subscriptions), customers receive a link to complete purchase on the merchant's web store. This preserves the sale while maintaining brand experience.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pre-Launch Checklist -->
+                    <div class="tech-subsection">
+                        <h4>Pre-Launch Checklist</h4>
+                        <p class="subsection-intro">Essential configuration steps before going live:</p>
+                        
+                        <div class="checklist-container">
+                            <div class="checklist-category">
+                                <h5>Store Configuration</h5>
+                                <div class="checklist-items">
+                                    <label class="checklist-item">
+                                        <input type="checkbox" class="checklist-checkbox">
+                                        <span class="checkmark"></span>
+                                        <span class="item-text">Shopify Payments enabled and verified</span>
+                                    </label>
+                                    <label class="checklist-item">
+                                        <input type="checkbox" class="checklist-checkbox">
+                                        <span class="checkmark"></span>
+                                        <span class="item-text">Customer accounts set to "Optional" (not Required)</span>
+                                    </label>
+                                    <label class="checklist-item">
+                                        <input type="checkbox" class="checklist-checkbox">
+                                        <span class="checkmark"></span>
+                                        <span class="item-text">Buyer policies published (ToS, Privacy, Returns)</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="checklist-category">
+                                <h5>Product Data</h5>
+                                <div class="checklist-items">
+                                    <label class="checklist-item">
+                                        <input type="checkbox" class="checklist-checkbox">
+                                        <span class="checkmark"></span>
+                                        <span class="item-text">All required fields populated (title, description, image, price, inventory)</span>
+                                    </label>
+                                    <label class="checklist-item">
+                                        <input type="checkbox" class="checklist-checkbox">
+                                        <span class="checkmark"></span>
+                                        <span class="item-text">Default Schema configured for product grouping</span>
+                                    </label>
+                                    <label class="checklist-item">
+                                        <input type="checkbox" class="checklist-checkbox">
+                                        <span class="checkmark"></span>
+                                        <span class="item-text">Products published to agentic sales channel</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="checklist-category">
+                                <h5>Integration</h5>
+                                <div class="checklist-items">
+                                    <label class="checklist-item">
+                                        <input type="checkbox" class="checklist-checkbox">
+                                        <span class="checkmark"></span>
+                                        <span class="item-text">Order webhooks subscribed (orders/create)</span>
+                                    </label>
+                                    <label class="checklist-item">
+                                        <input type="checkbox" class="checklist-checkbox">
+                                        <span class="checkmark"></span>
+                                        <span class="item-text">Fulfillment API integration tested</span>
+                                    </label>
+                                    <label class="checklist-item">
+                                        <input type="checkbox" class="checklist-checkbox">
+                                        <span class="checkmark"></span>
+                                        <span class="item-text">Refund workflow documented</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 4: Mental Models -->
+    <section class="module module-alt" id="mental-models" role="region" aria-labelledby="mental-models-title">
+        <div class="container">
+            <div class="module-header">
+                <span class="module-number">04</span>
+                <h2 class="module-title" id="mental-models-title">Mental Models</h2>
+                <p class="module-subtitle">Five frameworks for explaining UCP to enterprise merchants</p>
+                <p class="module-context"><strong>Why This Matters:</strong> The right mental model transforms a technical pitch into a strategic conversation that resonates with C-suite priorities.</p>
+            </div>
+
+            <div class="models-grid">
+                <!-- Model 1: Checkout Evolution -->
+                <div class="model-card" data-model="evolution">
+                    <div class="model-header">
+                        <span class="model-probability high">85% Success</span>
+                        <h3>The Checkout Evolution</h3>
+                    </div>
+                    <div class="model-visual" id="model-evolution-visual">
+                        <div class="evolution-stages">
+                            <div class="evolution-stage">
+                                <div class="stage-icon">🛒</div>
+                                <span>Cart</span>
+                                <small>1990s</small>
+                            </div>
+                            <div class="evolution-arrow">→</div>
+                            <div class="evolution-stage">
+                                <div class="stage-icon">💳</div>
+                                <span>One-Click</span>
+                                <small>2000s</small>
+                            </div>
+                            <div class="evolution-arrow">→</div>
+                            <div class="evolution-stage">
+                                <div class="stage-icon">📱</div>
+                                <span>Mobile</span>
+                                <small>2010s</small>
+                            </div>
+                            <div class="evolution-arrow">→</div>
+                            <div class="evolution-stage active">
+                                <div class="stage-icon">🤖</div>
+                                <span>Agentic</span>
+                                <small>2020s</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="model-description">
+                        <p><strong>The Pitch:</strong> "Commerce checkout has evolved from shopping carts to one-click to mobile-first. UCP is the next evolution—<em>conversation-first</em>. Your brand's checkout becomes accessible wherever AI assistants operate."</p>
+                    </div>
+                    <div class="model-usage">
+                        <h4>Best For:</h4>
+                        <ul>
+                            <li>Innovation-focused executives</li>
+                            <li>Merchants concerned about future-proofing</li>
+                            <li>Early adopter personalities</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Model 2: Trust Triangle -->
+                <div class="model-card" data-model="trust">
+                    <div class="model-header">
+                        <span class="model-probability very-high">90% Success</span>
+                        <h3>The Trust Triangle</h3>
+                    </div>
+                    <div class="model-visual" id="model-trust-visual">
+                        <svg viewBox="0 0 300 260" class="trust-triangle-svg">
+                            <defs>
+                                <linearGradient id="triangleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#008060"/>
+                                    <stop offset="100%" style="stop-color:#00a878"/>
+                                </linearGradient>
+                            </defs>
+                            <polygon points="150,20 280,220 20,220" fill="none" stroke="url(#triangleGrad)" stroke-width="3"/>
+                            <circle cx="150" cy="20" r="30" fill="var(--surface-elevated)" stroke="var(--primary)" stroke-width="2"/>
+                            <text x="150" y="25" text-anchor="middle" class="triangle-label">Consumer</text>
+                            <circle cx="280" cy="220" r="30" fill="var(--surface-elevated)" stroke="var(--primary)" stroke-width="2"/>
+                            <text x="280" y="225" text-anchor="middle" class="triangle-label">Merchant</text>
+                            <circle cx="20" cy="220" r="30" fill="var(--surface-elevated)" stroke="var(--primary)" stroke-width="2"/>
+                            <text x="20" y="225" text-anchor="middle" class="triangle-label">Agent</text>
+                            <text x="150" y="150" text-anchor="middle" class="triangle-center">UCP</text>
+                            <text x="85" y="130" text-anchor="middle" class="triangle-edge">Identity</text>
+                            <text x="215" y="130" text-anchor="middle" class="triangle-edge">Checkout</text>
+                            <text x="150" y="240" text-anchor="middle" class="triangle-edge">Order</text>
+                        </svg>
+                    </div>
+                    <div class="model-description">
+                        <p><strong>The Pitch:</strong> "UCP creates a trust triangle between consumers, agents, and merchants. Each capability—Identity, Checkout, Order—secures one side of that triangle. The result is <em>verified, auditable, secure</em> commerce."</p>
+                    </div>
+                    <div class="model-usage">
+                        <h4>Best For:</h4>
+                        <ul>
+                            <li>Security-conscious merchants</li>
+                            <li>Compliance and legal stakeholders</li>
+                            <li>Enterprise IT decision makers</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Model 3: Omnichannel AI Layer -->
+                <div class="model-card" data-model="layer">
+                    <div class="model-header">
+                        <span class="model-probability high">80% Success</span>
+                        <h3>The Omnichannel AI Layer</h3>
+                    </div>
+                    <div class="model-visual" id="model-layer-visual">
+                        <div class="layer-stack">
+                            <div class="layer" data-layer="agents">
+                                <span class="layer-label">AI Agents</span>
+                                <div class="layer-items">
+                                    <span>ChatGPT</span>
+                                    <span>Copilot</span>
+                                    <span>Claude</span>
+                                    <span>Gemini</span>
+                                </div>
+                            </div>
+                            <div class="layer highlight" data-layer="ucp">
+                                <span class="layer-label">UCP</span>
+                                <div class="layer-items">
+                                    <span>Standard Protocol</span>
+                                </div>
+                            </div>
+                            <div class="layer" data-layer="commerce">
+                                <span class="layer-label">Commerce</span>
+                                <div class="layer-items">
+                                    <span>Catalog</span>
+                                    <span>Cart</span>
+                                    <span>Checkout</span>
+                                    <span>Orders</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="model-description">
+                        <p><strong>The Pitch:</strong> "Think of UCP as the connective tissue between AI agents and your commerce infrastructure. One integration, every AI surface. UCP is to AI commerce what SSL was to web security."</p>
+                    </div>
+                    <div class="model-usage">
+                        <h4>Best For:</h4>
+                        <ul>
+                            <li>Technical stakeholders</li>
+                            <li>Architecture-focused conversations</li>
+                            <li>Merchants with multi-channel complexity</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Model 4: Merchant Control Panel -->
+                <div class="model-card" data-model="control">
+                    <div class="model-header">
+                        <span class="model-probability medium">75% Success</span>
+                        <h3>The Merchant Control Panel</h3>
+                    </div>
+                    <div class="model-visual" id="model-control-visual">
+                        <div class="control-panel">
+                            <div class="control-row">
+                                <span class="control-label">Google Shopping Agent</span>
+                                <div class="control-toggle active">
+                                    <span class="toggle-status">Enabled</span>
+                                </div>
+                            </div>
+                            <div class="control-row">
+                                <span class="control-label">ChatGPT Commerce</span>
+                                <div class="control-toggle active">
+                                    <span class="toggle-status">Enabled</span>
+                                </div>
+                            </div>
+                            <div class="control-row">
+                                <span class="control-label">Amazon Alexa</span>
+                                <div class="control-toggle">
+                                    <span class="toggle-status">Disabled</span>
+                                </div>
+                            </div>
+                            <div class="control-row">
+                                <span class="control-label">Custom Agent</span>
+                                <div class="control-toggle">
+                                    <span class="toggle-status">Pending</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="model-description">
+                        <p><strong>The Pitch:</strong> "UCP puts you in control. Enable agents you trust, disable ones you don't. Set transaction limits, define product access, review performance—all from your Shopify admin."</p>
+                    </div>
+                    <div class="model-usage">
+                        <h4>Best For:</h4>
+                        <ul>
+                            <li>Control-focused merchants</li>
+                            <li>Brand protection concerns</li>
+                            <li>Merchants wary of AI</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Model 5: Post-Purchase Promise -->
+                <div class="model-card" data-model="promise">
+                    <div class="model-header">
+                        <span class="model-probability medium">70% Success</span>
+                        <h3>The Post-Purchase Promise</h3>
+                    </div>
+                    <div class="model-visual" id="model-promise-visual">
+                        <div class="promise-flow">
+                            <div class="promise-step">
+                                <div class="step-icon">📦</div>
+                                <span>Order Placed</span>
+                            </div>
+                            <div class="promise-connector"></div>
+                            <div class="promise-step">
+                                <div class="step-icon">🤖</div>
+                                <span>Agent Monitors</span>
+                            </div>
+                            <div class="promise-connector"></div>
+                            <div class="promise-step">
+                                <div class="step-icon">📲</div>
+                                <span>Proactive Updates</span>
+                            </div>
+                            <div class="promise-connector"></div>
+                            <div class="promise-step">
+                                <div class="step-icon">💚</div>
+                                <span>Customer Delight</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="model-description">
+                        <p><strong>The Pitch:</strong> "UCP doesn't end at checkout. Agents proactively update customers on shipping, handle 'Where's my order?' queries, and facilitate returns. Result: happier customers, fewer support tickets."</p>
+                    </div>
+                    <div class="model-usage">
+                        <h4>Best For:</h4>
+                        <ul>
+                            <li>CX-focused merchants</li>
+                            <li>High support ticket volume</li>
+                            <li>Subscription/replenishment brands</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 5: Talk Tracks -->
+    <section class="module" id="talk-tracks" role="region" aria-labelledby="talk-tracks-title">
+        <div class="container">
+            <div class="module-header">
+                <span class="module-number">05</span>
+                <h2 class="module-title" id="talk-tracks-title">Talk Tracks</h2>
+                <p class="module-subtitle">Pre-built conversation frameworks for enterprise merchant discussions</p>
+                <p class="module-context"><strong>Why This Matters:</strong> These battle-tested scripts help you navigate common objections and position UCP as a strategic imperative, not a feature checkbox.</p>
+            </div>
+
+            <div class="talk-tracks-container">
+                <!-- Talk Track Builder -->
+                <div class="track-builder">
+                    <h3>Talk Track Builder</h3>
+                    <p>Select a scenario to get a customized talk track</p>
+                    <div class="scenario-selector">
+                        <button class="scenario-btn active" data-scenario="discovery">Discovery Call</button>
+                        <button class="scenario-btn" data-scenario="objection">Objection Handling</button>
+                        <button class="scenario-btn" data-scenario="demo">Demo Setup</button>
+                        <button class="scenario-btn" data-scenario="competitive">Competitive</button>
+                    </div>
+                </div>
+
+                <!-- Discovery Talk Track -->
+                <div class="talk-track active" data-track="discovery">
+                    <div class="track-header">
+                        <h3>Discovery Questions for Agentic Readiness</h3>
+                        <button class="copy-track-btn" data-track="discovery">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                            Copy All
+                        </button>
+                    </div>
+                    <div class="track-content">
+                        <div class="track-section">
+                            <h4>Opening Frame</h4>
+                            <blockquote class="track-script">
+                                "I'd love to understand how your customers are discovering and purchasing your products today. Are you seeing any shift toward AI-assisted shopping—whether that's customers using ChatGPT, voice assistants, or other AI tools to research your brand?"
+                            </blockquote>
+                        </div>
+                        <div class="track-section">
+                            <h4>Channel Strategy Questions</h4>
+                            <ul class="track-questions">
+                                <li>"What percentage of your traffic comes from mobile devices versus desktop?"</li>
+                                <li>"Have you explored voice commerce or conversational interfaces?"</li>
+                                <li>"How do you think about emerging channels in your 2026 roadmap?"</li>
+                            </ul>
+                        </div>
+                        <div class="track-section">
+                            <h4>Pain Point Exploration</h4>
+                            <ul class="track-questions">
+                                <li>"What's your current checkout conversion rate? Where do you see the biggest drop-off?"</li>
+                                <li>"How much of your support volume is 'Where's my order?' tickets?"</li>
+                                <li>"For returning customers, what friction points exist in their repurchase journey?"</li>
+                            </ul>
+                        </div>
+                        <div class="track-section">
+                            <h4>Innovation Appetite</h4>
+                            <ul class="track-questions">
+                                <li>"How does your leadership think about being a fast follower versus first mover on new technology?"</li>
+                                <li>"Are any of your competitors experimenting with AI commerce?"</li>
+                                <li>"What would it mean for your brand to be accessible through AI assistants like ChatGPT or Google?"</li>
+                            </ul>
+                        </div>
+                        <div class="track-section">
+                            <h4>Transition to UCP</h4>
+                            <blockquote class="track-script">
+                                "Based on what you've shared, I think there's a really exciting opportunity here. Shopify recently launched something called the Universal Commerce Protocol—or UCP—which is an open standard that lets AI agents transact on behalf of customers. Let me share what this could mean for [Brand]..."
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Objection Handling Talk Track -->
+                <div class="talk-track" data-track="objection">
+                    <div class="track-header">
+                        <h3>Objection Handling Playbook</h3>
+                        <button class="copy-track-btn" data-track="objection">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                            Copy All
+                        </button>
+                    </div>
+                    <div class="track-content">
+                        <div class="objection-card">
+                            <div class="objection-header">
+                                <span class="objection-label">Security Concern</span>
+                                <h4>"How do we know these AI agents are secure?"</h4>
+                            </div>
+                            <div class="objection-response">
+                                <p><strong>Acknowledge:</strong> "That's exactly the right question to ask. Security was the first thing we designed for."</p>
+                                <p><strong>Respond:</strong> "UCP uses verifiable credentials—similar to how SSL certificates verify websites. Every agent must prove its identity before transacting. You control which agents can access your store, and every transaction has a complete audit trail."</p>
+                                <p><strong>Evidence:</strong> "This is the same standard Google and Shopify built together. It's not theoretical—it's in production."</p>
+                            </div>
+                        </div>
+                        <div class="objection-card">
+                            <div class="objection-header">
+                                <span class="objection-label">Control Concern</span>
+                                <h4>"We don't want to lose control of our checkout experience"</h4>
+                            </div>
+                            <div class="objection-response">
+                                <p><strong>Acknowledge:</strong> "Brand control is non-negotiable. I hear that."</p>
+                                <p><strong>Respond:</strong> "UCP actually increases your control. You set the rules: which products agents can sell, what discounts they can apply, even which agents can transact at all. And your checkout branding? It stays intact—Checkout UI extensions work exactly the same."</p>
+                                <p><strong>Evidence:</strong> "Think of it like opening a new sales channel, but you hold all the keys."</p>
+                            </div>
+                        </div>
+                        <div class="objection-card">
+                            <div class="objection-header">
+                                <span class="objection-label">Timing Concern</span>
+                                <h4>"Is this too early? Should we wait?"</h4>
+                            </div>
+                            <div class="objection-response">
+                                <p><strong>Acknowledge:</strong> "It's smart to think about timing. Not every technology is ready for enterprise."</p>
+                                <p><strong>Respond:</strong> "UCP just launched at NRF with Google as the primary partner. This isn't vapor—it's live. The question is whether you want to be one of the first lifestyle brands your customers can shop through AI, or catch up later."</p>
+                                <p><strong>Evidence:</strong> "Early movers in mobile commerce captured disproportionate share. We're seeing the same opportunity here."</p>
+                            </div>
+                        </div>
+                        <div class="objection-card">
+                            <div class="objection-header">
+                                <span class="objection-label">Resource Concern</span>
+                                <h4>"We don't have bandwidth for another integration"</h4>
+                            </div>
+                            <div class="objection-response">
+                                <p><strong>Acknowledge:</strong> "Tech teams are stretched. I get it."</p>
+                                <p><strong>Respond:</strong> "Here's the thing: there is no integration. If you're on Shopify, UCP is already there. It's opt-in, so you literally flip a switch in admin. No dev time, no project plan, no sprint allocation."</p>
+                                <p><strong>Evidence:</strong> "That's the Shopify advantage. SFCC merchants would need months of custom development."</p>
+                            </div>
+                        </div>
+                        <div class="objection-card">
+                            <div class="objection-header">
+                                <span class="objection-label">Data Privacy Concern</span>
+                                <h4>"Will our customer data train AI models?"</h4>
+                            </div>
+                            <div class="objection-response">
+                                <p><strong>Acknowledge:</strong> "Data privacy is non-negotiable. Completely understand."</p>
+                                <p><strong>Respond:</strong> "Customer PII is NOT shared with AI partners for training. Transaction data stays within Shopify's secure infrastructure. AI model training uses only aggregated, anonymized patterns—never individual customer data."</p>
+                                <p><strong>Evidence:</strong> "AI agents receive structured product data for discovery—they don't receive or retain customer PII beyond what's necessary for the specific transaction. Full GDPR and CCPA compliance."</p>
+                            </div>
+                        </div>
+                        <div class="objection-card">
+                            <div class="objection-header">
+                                <span class="objection-label">Fraud Concern</span>
+                                <h4>"We're worried about bulk buyers and resellers"</h4>
+                            </div>
+                            <div class="objection-response">
+                                <p><strong>Acknowledge:</strong> "Luxury and high-demand brands face real challenges here. Valid concern."</p>
+                                <p><strong>Respond:</strong> "Shopify's eligibility rules let you configure which products can be sold through AI channels. Standard fraud analysis applies to all transactions. You get granular control to enable or disable specific AI partners."</p>
+                                <p><strong>Evidence:</strong> "Orders flow through your standard fulfillment with full visibility. Same fraud protection, same controls—just a new channel."</p>
+                            </div>
+                        </div>
+                        <div class="objection-card">
+                            <div class="objection-header">
+                                <span class="objection-label">Marketplace Confusion</span>
+                                <h4>"Is this just another marketplace we have to manage?"</h4>
+                            </div>
+                            <div class="objection-response">
+                                <p><strong>Acknowledge:</strong> "Fair question. Marketplace fatigue is real."</p>
+                                <p><strong>Respond:</strong> "UCP is infrastructure, not a marketplace. AI agents query your catalog directly—you own the customer relationship and the transaction. There's no separate store to manage, no inventory sync headaches, no marketplace fees from Shopify."</p>
+                                <p><strong>Evidence:</strong> "Think of it like Google Shopping meets your existing storefront. You're not listing on a marketplace—you're making your store AI-accessible."</p>
+                            </div>
+                        </div>
+                        <div class="objection-card">
+                            <div class="objection-header">
+                                <span class="objection-label">Legal Concern</span>
+                                <h4>"Our legal team needs to review this"</h4>
+                            </div>
+                            <div class="objection-response">
+                                <p><strong>Acknowledge:</strong> "Absolutely—legal review is standard for new channels."</p>
+                                <p><strong>Respond:</strong> "We have updated Agentic Storefronts Terms of Service specifically for AI commerce. Merchants receive these via email before enablement and have an opt-out period. Happy to connect your legal team with ours for any questions."</p>
+                                <p><strong>Evidence:</strong> "The ToS covers data sharing, transaction handling, and compliance requirements. It's been reviewed for GDPR, CCPA, and other major regulations."</p>
+                            </div>
+                        </div>
+                        <div class="objection-card">
+                            <div class="objection-header">
+                                <span class="objection-label">Future-Proofing</span>
+                                <h4>"What about Agent-to-Agent commerce?"</h4>
+                            </div>
+                            <div class="objection-response">
+                                <p><strong>Acknowledge:</strong> "Great question—you're thinking ahead of most."</p>
+                                <p><strong>Respond:</strong> "UCP is designed for that future. Storefront MCP APIs enable merchant-side agent capabilities. The Catalog API provides structured data for agent discovery. Agentic checkout infrastructure supports programmatic transactions. Fraud protection works across all agent interactions."</p>
+                                <p><strong>Evidence:</strong> "Today's integrations with ChatGPT, Gemini, and Copilot are the bridge to true agent-to-agent commerce. Brands building on Shopify now will be positioned when that scales."</p>
+                            </div>
+                        </div>
+                        <div class="objection-card">
+                            <div class="objection-header">
+                                <span class="objection-label">Protocol Confusion</span>
+                                <h4>"How is this different from Stripe's ACP?"</h4>
+                            </div>
+                            <div class="objection-response">
+                                <p><strong>Acknowledge:</strong> "There are multiple protocols out there. Let me clarify."</p>
+                                <p><strong>Respond:</strong> "Stripe's Agent Commerce Protocol is payments-only—it handles transactions but not discovery, cart management, or post-purchase. UCP is full-stack commerce: Catalog for discovery, Cart for shopping, Checkout with AP2 for payments, Identity for customer recognition, and Order for post-purchase."</p>
+                                <p><strong>Evidence:</strong> "Analogy: ACP is like having a payment terminal. UCP is like having a complete store that AI agents can shop. Google and Shopify co-developed UCP—it's the comprehensive solution."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Demo Setup Talk Track -->
+                <div class="talk-track" data-track="demo">
+                    <div class="track-header">
+                        <h3>Demo Flow Suggestions</h3>
+                        <button class="copy-track-btn" data-track="demo">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                            Copy All
+                        </button>
+                    </div>
+                    <div class="track-content">
+                        <div class="demo-flow">
+                            <div class="demo-step">
+                                <span class="step-number">1</span>
+                                <div class="step-content">
+                                    <h4>Set the Scene (2 min)</h4>
+                                    <p>"Let me show you what shopping looks like in 2026. Instead of your customer navigating your site, they simply ask their AI assistant."</p>
+                                </div>
+                            </div>
+                            <div class="demo-step">
+                                <span class="step-number">2</span>
+                                <div class="step-content">
+                                    <h4>Product Discovery (3 min)</h4>
+                                    <p>Show an AI agent querying the catalog: "Find me a cashmere sweater from [Brand] under $300 in navy."</p>
+                                    <p class="demo-note">Highlight: Product data, inventory, variants all accessible to the agent.</p>
+                                </div>
+                            </div>
+                            <div class="demo-step">
+                                <span class="step-number">3</span>
+                                <div class="step-content">
+                                    <h4>Cart & Checkout (5 min)</h4>
+                                    <p>Walk through the agent building a cart, applying a loyalty discount, and completing checkout with saved payment.</p>
+                                    <p class="demo-note">Highlight: Full Shopify checkout, branding intact, fraud protection active.</p>
+                                </div>
+                            </div>
+                            <div class="demo-step">
+                                <span class="step-number">4</span>
+                                <div class="step-content">
+                                    <h4>Post-Purchase (3 min)</h4>
+                                    <p>"Where's my order from [Brand]?" → Agent queries order status, provides tracking, offers delivery notification.</p>
+                                    <p class="demo-note">Highlight: Reduced WISMO tickets, proactive communication.</p>
+                                </div>
+                            </div>
+                            <div class="demo-step">
+                                <span class="step-number">5</span>
+                                <div class="step-content">
+                                    <h4>Merchant Admin (2 min)</h4>
+                                    <p>Show the admin panel: enabled agents, transaction limits, analytics dashboard.</p>
+                                    <p class="demo-note">Highlight: Merchant control, visibility, audit trail.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Competitive Talk Track -->
+                <div class="talk-track" data-track="competitive">
+                    <div class="track-header">
+                        <h3>Competitive Positioning Statements</h3>
+                        <button class="copy-track-btn" data-track="competitive">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                            Copy All
+                        </button>
+                    </div>
+                    <div class="track-content">
+                        <div class="competitive-section">
+                            <h4>vs. Salesforce Commerce Cloud (SFCC)</h4>
+                            <div class="competitive-points">
+                                <div class="point win">
+                                    <span class="point-label">Shopify Advantage</span>
+                                    <p>"SFCC would need to build UCP support from scratch. That's 6-12 months of custom development. Shopify merchants have it today, out of the box."</p>
+                                </div>
+                                <div class="point win">
+                                    <span class="point-label">Partnership</span>
+                                    <p>"Shopify co-designed UCP with Google. We're foundation partners, not followers. That means tighter integration, faster updates, and priority access to new features."</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="competitive-section">
+                            <h4>vs. BigCommerce</h4>
+                            <div class="competitive-points">
+                                <div class="point win">
+                                    <span class="point-label">Availability</span>
+                                    <p>"BigCommerce has no UCP roadmap we're aware of. This capability simply doesn't exist on their platform."</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="competitive-section">
+                            <h4>vs. Custom Build</h4>
+                            <div class="competitive-points">
+                                <div class="point win">
+                                    <span class="point-label">Time & Cost</span>
+                                    <p>"You could build your own UCP implementation. Budget 6-12 months and $500K-$1M. Or enable it on Shopify in days at no additional cost."</p>
+                                </div>
+                                <div class="point win">
+                                    <span class="point-label">Maintenance</span>
+                                    <p>"UCP will evolve. Shopify maintains compliance automatically. Custom builds require ongoing investment."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 6: Resources -->
+    <section class="module module-alt" id="resources" role="region" aria-labelledby="resources-title">
+        <div class="container">
+            <div class="module-header">
+                <span class="module-number">06</span>
+                <h2 class="module-title" id="resources-title">Resources Hub</h2>
+                <p class="module-subtitle">Everything you need to master UCP positioning</p>
+                <p class="module-context"><strong>Why This Matters:</strong> Quick access to authoritative sources lets you answer any question with confidence and credibility.</p>
+            </div>
+
+            <div class="resources-grid">
+                <!-- Official Documentation -->
+                <div class="resource-category">
+                    <h3>Official Documentation</h3>
+                    <div class="resource-links">
+                        <a href="https://ucp.dev" target="_blank" class="resource-link external">
+                            <div class="resource-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                            </div>
+                            <div class="resource-content">
+                                <span class="resource-title">UCP.dev</span>
+                                <span class="resource-desc">Official Universal Commerce Protocol specification</span>
+                            </div>
+                        </a>
+                        <a href="https://shopify.dev/docs/agents" target="_blank" class="resource-link external">
+                            <div class="resource-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                            </div>
+                            <div class="resource-content">
+                                <span class="resource-title">Shopify Agentic Commerce Docs</span>
+                                <span class="resource-desc">Shopify's implementation guide and API reference</span>
+                            </div>
+                        </a>
+                        <a href="https://www.shopify.com/ucp" target="_blank" class="resource-link external">
+                            <div class="resource-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                            </div>
+                            <div class="resource-content">
+                                <span class="resource-title">Shopify UCP Landing Page</span>
+                                <span class="resource-desc">Marketing page for merchant-facing conversations</span>
+                            </div>
+                        </a>
+                        <a href="https://shopify.engineering/ucp" target="_blank" class="resource-link external featured">
+                            <div class="resource-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                </svg>
+                            </div>
+                            <div class="resource-content">
+                                <span class="resource-title">Building UCP: Engineering Deep-Dive</span>
+                                <span class="resource-desc">Ilya Grigorik on UCP architecture, protocol design, and engineering decisions</span>
+                            </div>
+                            <span class="resource-badge">NEW</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Internal Resources -->
+                <div class="resource-category">
+                    <h3>Internal Resources <span class="internal-badge">[INTERNAL-ONLY]</span></h3>
+                    <div class="resource-links">
+                        <a href="https://vault.shopify.io/gsd/projects/48453" target="_blank" class="resource-link internal">
+                            <div class="resource-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                </svg>
+                            </div>
+                            <div class="resource-content">
+                                <span class="resource-title">Vault: UCP Checkout Project</span>
+                                <span class="resource-desc">Project #48453 - Build status and technical details</span>
+                            </div>
+                        </a>
+                        <a href="https://vault.shopify.io/gsd/missions/8590" target="_blank" class="resource-link internal">
+                            <div class="resource-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                </svg>
+                            </div>
+                            <div class="resource-content">
+                                <span class="resource-title">Vault: Agentic Commerce Mission</span>
+                                <span class="resource-desc">Mission #8590 - Strategic context and roadmap</span>
+                            </div>
+                        </a>
+                        <a href="https://shopify.enterprise.slack.com/archives/C037K4GBHQF" target="_blank" class="resource-link internal">
+                            <div class="resource-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="resource-content">
+                                <span class="resource-title">#proj-universal-commerce-protocol</span>
+                                <span class="resource-desc">Primary UCP project channel</span>
+                            </div>
+                        </a>
+                        <a href="#" class="resource-link internal">
+                            <div class="resource-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="resource-content">
+                                <span class="resource-title">#help-agentic-storefronts</span>
+                                <span class="resource-desc">Support channel for agentic commerce questions</span>
+                            </div>
+                        </a>
+                        <a href="#" class="resource-link internal">
+                            <div class="resource-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="resource-content">
+                                <span class="resource-title">#agentic-plan-enterprise-gtm</span>
+                                <span class="resource-desc">Enterprise GTM planning for Agentic Plan</span>
+                            </div>
+                        </a>
+                        <a href="https://docs.google.com/document/d/1Dg_TO6dMac2iRAo1uyq5KWVww4JumKePF7EuHdiTkTE/edit" target="_blank" class="resource-link internal">
+                            <div class="resource-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                </svg>
+                            </div>
+                            <div class="resource-content">
+                                <span class="resource-title">NRF Talking Points</span>
+                                <span class="resource-desc">Official messaging and key details for NRF announcements</span>
+                            </div>
+                        </a>
+                        <a href="https://docs.google.com/presentation/d/1kxDthJ8EvFktIVc0dWf5SxMVjtnhDyYFkCqjMkBnyKw/edit" target="_blank" class="resource-link internal">
+                            <div class="resource-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                                </svg>
+                            </div>
+                            <div class="resource-content">
+                                <span class="resource-title">Value Deck</span>
+                                <span class="resource-desc">UCP value proposition slides for merchant presentations</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Reference -->
+                <div class="resource-category full-width">
+                    <h3>Quick Reference Cards</h3>
+                    <div class="reference-cards">
+                        <div class="reference-card">
+                            <h4>UCP Capabilities</h4>
+                            <ul>
+                                <li><strong>Checkout</strong> - Create, update, complete checkouts</li>
+                                <li><strong>Identity</strong> - OAuth 2.0, verifiable credentials</li>
+                                <li><strong>Order</strong> - Status, tracking, returns</li>
+                            </ul>
+                        </div>
+                        <div class="reference-card">
+                            <h4>Foundation Standards</h4>
+                            <ul>
+                                <li><strong>REST + JSON-RPC</strong> - API communication</li>
+                                <li><strong>AP2</strong> - Agent Payments Protocol</li>
+                                <li><strong>A2A</strong> - Agent-to-Agent Protocol</li>
+                                <li><strong>MCP</strong> - Model Context Protocol</li>
+                            </ul>
+                        </div>
+                        <div class="reference-card">
+                            <h4>Eligibility (Jan 2026)</h4>
+                            <ul>
+                                <li>US market merchants</li>
+                                <li>Shopify Payments enabled</li>
+                                <li>INFORM Act compliant</li>
+                                <li>Opt-in enrollment</li>
+                            </ul>
+                        </div>
+                        <div class="reference-card">
+                            <h4>Key Dates & Timeline</h4>
+                            <ul>
+                                <li><strong>Jan 2026</strong> - NRF announcements (UCP, Integrations, Agentic Plan)</li>
+                                <li><strong>Mid-Jan 2026</strong> - Google AI Mode / Gemini rollout begins</li>
+                                <li><strong>End of Jan 2026</strong> - US merchant cohort enablement starts</li>
+                                <li><strong>Q1 2026</strong> - Agentic Plan expanded access</li>
+                                <li><strong>H1 2026</strong> - Additional AI partner integrations</li>
+                                <li><strong>Later 2026</strong> - Agentic Plan GA, B2B workflow support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 7: FAQ -->
+    <section class="module" id="faq" role="region" aria-labelledby="faq-title">
+        <div class="container">
+            <div class="module-header">
+                <span class="module-number">07</span>
+                <h2 class="module-title" id="faq-title">Frequently Asked Questions</h2>
+                <p class="module-subtitle">Executive-level answers for enterprise merchant conversations</p>
+                <p class="module-context"><strong>Why This Matters:</strong> These pre-vetted responses let you address complex questions with confidence, backed by official Shopify positioning.</p>
+            </div>
+
+            <!-- FAQ Search -->
+            <div class="faq-search-container">
+                <input type="text" class="faq-search" id="faq-search" placeholder="Search FAQs..." aria-label="Search FAQs">
+                <svg class="faq-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+            </div>
+
+            <!-- FAQ Category Tabs -->
+            <div class="faq-category-tabs">
+                <button class="faq-tab active" data-category="all">All</button>
+                <button class="faq-tab" data-category="enterprise">Enterprise</button>
+                <button class="faq-tab" data-category="competitive">Competitive</button>
+                <button class="faq-tab" data-category="technical">Technical</button>
+                <button class="faq-tab" data-category="internal">Internal</button>
+            </div>
+
+            <!-- FAQ Container -->
+            <div class="faq-container">
+                
+                <!-- Enterprise Merchant FAQs -->
+                <div class="faq-section" data-category="enterprise">
+                    <h3 class="faq-section-title">Enterprise Merchant Questions</h3>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>What is UCP and why should we care?</span>
+                            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>UCP (Universal Commerce Protocol) is an open standard that creates a common language for AI assistants to interact with commerce infrastructure. Instead of building custom integrations for every AI platform (ChatGPT, Google, Copilot), you expose UCP-compliant endpoints once and all AI agents can discover your products, add to cart, checkout, and handle post-purchase.</p>
+                            <p><strong>Why it matters for enterprise:</strong> Your competitors are either not showing up in AI conversations at all, or they're being scraped with incomplete/stale data. UCP gives you structured, real-time product data with full brand control in AI shopping experiences.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>How does this actually work for our customers?</span>
+                            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>When a consumer asks an AI assistant "find me sustainable running shoes under $150," the AI:</p>
+                            <ol>
+                                <li><strong>Discovers</strong> products through UCP's Catalog capability (your structured product data)</li>
+                                <li><strong>Recommends</strong> based on your product attributes, reviews, and Knowledge Base content</li>
+                                <li><strong>Creates a cart</strong> with your real-time inventory and pricing</li>
+                                <li><strong>Completes checkout</strong> using secure payment mandates (AP2 protocol)</li>
+                                <li><strong>Provides updates</strong> on order status, shipping, and returns through Order capability</li>
+                            </ol>
+                            <p>The consumer never leaves the AI interface—but the order flows directly into your Shopify backend.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>What do we need to build or integrate?</span>
+                            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p><strong>Nothing.</strong> For Shopify merchants:</p>
+                            <ul>
+                                <li><strong>Catalog:</strong> Your existing product data is already UCP-ready</li>
+                                <li><strong>Checkout:</strong> Shop Pay handles secure AI transactions natively</li>
+                                <li><strong>Identity:</strong> OAuth 2.0 identity linking is built-in</li>
+                                <li><strong>Order:</strong> Post-purchase webhooks work automatically</li>
+                            </ul>
+                            <p>You simply opt-in through admin settings. No development, no third-party apps, no implementation timeline.</p>
+                            <p><strong>Contrast with competitors:</strong> SFCC merchants would need 6-12 months of custom development to achieve the same functionality. BigCommerce has no native UCP support.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Who are these AI partners and when do they go live?</span>
+                            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <table class="faq-table">
+                                <thead>
+                                    <tr><th>Partner</th><th>Status</th><th>Platform Fee</th><th>Notes</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>Google AI Mode / Gemini</strong></td><td>Rolling out mid-Jan 2026</td><td>None</td><td>Foundation partner, co-developed UCP</td></tr>
+                                    <tr><td><strong>Microsoft Copilot</strong></td><td>Live Now</td><td>None</td><td>Checkout integration active</td></tr>
+                                    <tr><td><strong>ChatGPT (OpenAI)</strong></td><td>Live (26+ brands)</td><td>4%</td><td>OpenAI's fee, not Shopify's</td></tr>
+                                    <tr><td><strong>Perplexity</strong></td><td>Coming Soon</td><td>TBD</td><td>In development</td></tr>
+                                    <tr><td><strong>Shop App</strong></td><td>Live</td><td>None</td><td>Included for all merchants</td></tr>
+                                </tbody>
+                            </table>
+                            <p><strong>Rollout:</strong> US merchants enabled in cohorts starting end of January 2026. Merchants receive email with updated Agentic Storefronts Terms of Service and have opt-out period before AI channels are enabled.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>What's the business model? Are there fees?</span>
+                            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <ul>
+                                <li><strong>Shopify Platform Fee:</strong> None for Plus/Enterprise merchants</li>
+                                <li><strong>AI Partner Fees:</strong> Vary by channel (ChatGPT charges 4%, Google/Microsoft charge nothing currently)</li>
+                                <li><strong>Shop Pay Processing:</strong> Standard processing fees apply to transactions</li>
+                            </ul>
+                            <p><strong>Key point:</strong> This is not a new revenue extraction play—it's a channel expansion opportunity. Shopify makes money when merchants grow; we're not adding intermediary fees.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>How do we maintain brand control in AI conversations?</span>
+                            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Multiple control mechanisms:</p>
+                            <ol>
+                                <li><strong>Knowledge Base:</strong> Define FAQs, brand voice, and product positioning that AI agents reference when answering questions</li>
+                                <li><strong>Default Listing:</strong> Control how products appear in AI recommendations</li>
+                                <li><strong>Resource Feedback:</strong> Provide channel-specific feedback on product presentation</li>
+                                <li><strong>Opt-in/Opt-out:</strong> Enable or disable specific AI channels</li>
+                                <li><strong>Product Eligibility:</strong> Set which products can be sold through AI channels</li>
+                            </ol>
+                            <p><strong>Important:</strong> AI agents don't make up answers about your products—they reference your structured data and Knowledge Base content.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>What about data sharing and privacy?</span>
+                            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <ul>
+                                <li><strong>Product Data:</strong> Shared with AI partners for discovery/recommendation (similar to Google Shopping)</li>
+                                <li><strong>Customer Data:</strong> NOT shared with AI partners—transactions process through Shop Pay</li>
+                                <li><strong>Order Data:</strong> Stays in your Shopify admin; AI partners only see order confirmation status</li>
+                            </ul>
+                            <p><strong>Compliance:</strong> All data sharing governed by updated Agentic Storefronts Terms of Service. Merchants must accept before enablement.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Will customer personal information be used to train AI models?</span>
+                            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p><strong>No.</strong> Customer personal information from transactions is NOT used to train AI models within Shopify or shared with AI partners for training purposes.</p>
+                            <ul>
+                                <li><strong>Transaction data</strong> stays within Shopify's secure infrastructure</li>
+                                <li><strong>AI model training</strong> uses aggregated, anonymized data patterns—not individual customer PII</li>
+                                <li><strong>Privacy controls</strong> ensure compliance with GDPR, CCPA, and other regulations</li>
+                            </ul>
+                            <p><strong>Key distinction:</strong> AI agents receive structured product data to facilitate discovery and checkout—they do not receive or retain customer PII beyond what's necessary for the specific transaction.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>How do we measure success?</span>
+                            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Track through Shopify analytics:</p>
+                            <ul>
+                                <li><strong>Incremental Orders:</strong> Orders attributed to AI channels (new attribution source)</li>
+                                <li><strong>AI Traffic:</strong> Sessions originating from AI assistants</li>
+                                <li><strong>Conversion Rate:</strong> AI-referred vs. traditional traffic</li>
+                                <li><strong>WISMO Reduction:</strong> AI agents handle order status queries automatically</li>
+                                <li><strong>Repeat Purchase Rate:</strong> AI-facilitated reorders</li>
+                            </ul>
+                            <p><strong>Note:</strong> AI channel attribution is a new dimension in Shopify analytics—similar to how you track social or email channels today.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Competitive & Strategic FAQs -->
+                <div class="faq-section" data-category="competitive">
+                    <h3 class="faq-section-title">Competitive & Strategic Questions</h3>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>How is this different from what Stripe announced (ACP)?</span>
+                            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Stripe's Agent Commerce Protocol (ACP) is <strong>payments-only</strong>—it handles the transaction but doesn't address discovery, cart management, or post-purchase.</p>
+                            <p><strong>UCP is full-stack commerce:</strong></p>
+                            <ul>
+                                <li>Catalog (discovery)</li>
+                                <li>Cart (shopping)</li>
+                                <li>Checkout (payments via AP2)</li>
+                                <li>Identity (customer recognition)</li>
+                                <li>Order (post-purchase)</li>
+                            </ul>
+                            <p><strong>Analogy:</strong> ACP is like having a payment terminal. UCP is like having a complete store that AI agents can shop.</p>
+                            <p><strong>Industry Context:</strong> Even OpenAI/Stripe have faced challenges with product data standardization—ensuring accurate, up-to-date product information flows correctly to AI agents. Shopify's native integration solves this at the platform level.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>What about the "Agent-to-Agent" future enterprise brands are asking about?</span>
+                            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Some enterprise brands are thinking beyond current ChatGPT-style shopping to a true "agent-to-agent" model where:</p>
+                            <ul>
+                                <li>Customer's AI agent (from their phone, closet app, etc.) interacts with merchant's AI agent</li>
+                                <li>Agents negotiate, verify, and complete transactions</li>
+                                <li>Checkout happens on merchant side with secure token-based payment</li>
+                            </ul>
+                            <p><strong>Shopify's position:</strong> UCP is designed for this future:</p>
+                            <ul>
+                                <li><strong>Storefront MCP APIs</strong> enable merchant-side agent capabilities</li>
+                                <li><strong>Catalog API</strong> provides structured data for agent discovery</li>
+                                <li><strong>Agentic checkout infrastructure</strong> supports programmatic transactions</li>
+                                <li><strong>Fraud protection layer</strong> works across all agent interactions</li>
+                            </ul>
+                            <p><strong>Current state:</strong> Today's integrations (ChatGPT, Gemini, Copilot) are the bridge to this agent-to-agent future. Brands building on Shopify now will be positioned when true agent-to-agent commerce scales.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>What about Google's AP2 protocol?</span>
+                            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>AP2 (Agent Payments Protocol) is the <strong>security layer</strong> for AI transactions—verifiable credentials, payment mandates, fraud prevention. UCP <strong>incorporates</strong> AP2 for its Checkout capability.</p>
+                            <p>Think of it this way:</p>
+                            <ul>
+                                <li><strong>AP2</strong> = How AI agents pay securely</li>
+                                <li><strong>UCP</strong> = How AI agents shop (including paying via AP2)</li>
+                            </ul>
+                            <p>Google co-developed both with Shopify. They're complementary, not competing.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>How do we position against SFCC in enterprise deals?</span>
+                            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <table class="faq-table">
+                                <thead>
+                                    <tr><th>Capability</th><th>Shopify + UCP</th><th>SFCC</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Native UCP Support</td><td>Built-in</td><td>Requires integration</td></tr>
+                                    <tr><td>Time to Enable</td><td>Days</td><td>6-12 months</td></tr>
+                                    <tr><td>Google Partnership</td><td>Foundation Partner</td><td>No partnership</td></tr>
+                                    <tr><td>Checkout Branding</td><td>Full customization</td><td>Full customization</td></tr>
+                                    <tr><td>Development Required</td><td>None</td><td>Significant</td></tr>
+                                </tbody>
+                            </table>
+                            <p><strong>Talk Track:</strong> "SFCC can eventually build UCP integrations, but they're starting from scratch. Shopify merchants are already live with Google. By the time SFCC has something production-ready, your competitors on Shopify will have 12-18 months of AI commerce learnings and customer relationships."</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>What about enterprise concerns around bulk buyers and fraud?</span>
+                            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>This is a significant concern for luxury and high-demand brands. AI channels could potentially be exploited by bulk buyers for resale.</p>
+                            <p><strong>Shopify's approach:</strong></p>
+                            <ul>
+                                <li><strong>Eligibility Rules:</strong> Merchants can configure product eligibility for AI channels</li>
+                                <li><strong>Fraud Protection:</strong> Standard fraud analysis applies to all transactions</li>
+                                <li><strong>Channel Controls:</strong> Granular enable/disable per AI partner</li>
+                                <li><strong>Order Routing:</strong> Orders flow through standard fulfillment with full visibility</li>
+                            </ul>
+                            <p><strong>Enterprise consideration:</strong> Brands with existing B2B/bulk buyer programs may want to exclude certain products or implement additional verification for high-volume patterns. This is configurable through admin settings and eligibility rules.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>What if competitors say AI commerce is "just hype"?</span>
+                            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Counter with data:</p>
+                            <ul>
+                                <li><strong>9X AI traffic growth</strong> since January 2025</li>
+                                <li><strong>14X order increase</strong> from AI searches</li>
+                                <li><strong>Google, Microsoft, OpenAI</strong> are all investing heavily—this isn't speculative</li>
+                            </ul>
+                            <p><strong>Reframe:</strong> "The question isn't whether AI commerce will happen—it's whether you'll be positioned to capture it when it does. The brands showing up in AI conversations today are building relationships and data that will compound over time."</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>How do we handle "we want to wait and see"?</span>
+                            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <ol>
+                                <li><strong>First-mover advantage is real:</strong> AI assistants learn from successful transactions. Brands with early traction get recommended more.</li>
+                                <li><strong>Zero risk to try:</strong> No development cost, no platform fees, opt-out anytime.</li>
+                                <li><strong>Competitor pressure:</strong> If your competitors are on Shopify, they'll be enabled by default. Do you want to be absent from AI conversations while they're present?</li>
+                                <li><strong>Data advantage:</strong> Every AI interaction generates insights about how consumers discover and buy your products in conversational contexts.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical & Implementation FAQs -->
+                <div class="faq-section" data-category="technical">
+                    <h3 class="faq-section-title">Technical & Implementation Questions</h3>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>How does checkout work without a browser?</span>
+                            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>UCP uses <strong>payment mandates</strong> through the AP2 protocol:</p>
+                            <ol>
+                                <li>Consumer authenticates with their AI assistant (e.g., signed into Google)</li>
+                                <li>AI creates a checkout session with the merchant</li>
+                                <li>Consumer approves payment mandate ("Allow Google to complete this $89 purchase")</li>
+                                <li>Shop Pay processes the transaction with stored credentials</li>
+                                <li>Confirmation returned to AI assistant</li>
+                            </ol>
+                            <p><strong>Security:</strong> Every transaction requires explicit consumer approval. No "AI buying things without permission" scenario.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>What about complex B2B scenarios (custom pricing, approval workflows)?</span>
+                            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>UCP's capabilities are extensible:</p>
+                            <ul>
+                                <li><strong>B2B Pricing:</strong> AI agents can respect customer-specific pricing when identity is linked</li>
+                                <li><strong>Approval Workflows:</strong> Order capability can trigger approval flows before fulfillment</li>
+                                <li><strong>Quote Requests:</strong> AI can initiate quote requests that route to sales teams</li>
+                            </ul>
+                            <p><strong>Current limitation:</strong> Full B2B workflow support is roadmapped for later 2026. Today, focus on D2C use cases.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>How do returns and customer service work?</span>
+                            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Post-purchase handled through Order capability:</p>
+                            <ul>
+                                <li><strong>Order Status:</strong> AI agents can check status, tracking, delivery estimates</li>
+                                <li><strong>Returns:</strong> AI can initiate return requests that flow to your returns system</li>
+                                <li><strong>Support Escalation:</strong> Complex issues route to your support team with full context</li>
+                            </ul>
+                            <p><strong>Benefit:</strong> WISMO (Where Is My Order) queries—often 30-40% of support volume—can be handled entirely by AI agents without human intervention.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>What about inventory sync and real-time availability?</span>
+                            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>UCP uses your existing Shopify inventory:</p>
+                            <ul>
+                                <li><strong>Real-time sync:</strong> AI agents see current inventory levels</li>
+                                <li><strong>Backorder handling:</strong> Configurable per product</li>
+                                <li><strong>Location-based inventory:</strong> Multi-location inventory respected</li>
+                            </ul>
+                            <p><strong>No additional integration required</strong>—your existing inventory management flows through automatically.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Internal Shopify FAQs -->
+                <div class="faq-section" data-category="internal">
+                    <h3 class="faq-section-title">Internal Shopify Questions <span class="internal-badge">[INTERNAL-ONLY]</span></h3>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>What's the Agentic Plan for non-Shopify brands?</span>
+                            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Agentic Plan lets brands <strong>not on Shopify</strong> access AI commerce channels:</p>
+                            <ul>
+                                <li>Add products to Shopify Catalog (via PIM/feed integration)</li>
+                                <li>Configure basic checkout (Shopify Payments optional for most channels)</li>
+                                <li>Go live across all AI partners Shopify connects</li>
+                            </ul>
+                            <p><strong>Use case:</strong> SFCC or custom platform merchants who aren't ready to replatform but want AI commerce access. Opens new conversations without forcing migration decision.</p>
+                            <p><strong>Availability:</strong> Enterprise beta now, expanded access Q1 2026, GA later 2026.</p>
+                            <p><strong>Waitlist:</strong> <a href="https://shopify.com/agentic-plan" target="_blank">shopify.com/agentic-plan</a></p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>How should I bring this up in discovery?</span>
+                            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Frame as a future-proofing question:</p>
+                            <blockquote>"How are you thinking about AI-assisted shopping? We're seeing 9X traffic growth to merchants from AI searches. Curious if that's on your roadmap or if you're waiting to see how it plays out."</blockquote>
+                            <p><strong>Listen for:</strong></p>
+                            <ul>
+                                <li>Awareness level (most enterprises have heard of ChatGPT shopping)</li>
+                                <li>Competitive pressure (are competitors investing?)</li>
+                                <li>Technical appetite (do they want to build or buy?)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>What if the merchant is already on Shopify Plus?</span>
+                            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Great news—they're already enabled or will be soon:</p>
+                            <ol>
+                                <li>Check if they've received the Agentic Storefronts Terms of Service email</li>
+                                <li>Walk through admin settings for channel management</li>
+                                <li>Discuss Knowledge Base setup for brand voice control</li>
+                                <li>Review analytics for AI traffic attribution</li>
+                            </ol>
+                            <p><strong>Upsell opportunity:</strong> Enterprise tier includes priority support and advanced analytics for AI channels.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>What resources should I share with merchants?</span>
+                            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <table class="faq-table">
+                                <thead>
+                                    <tr><th>Resource</th><th>Audience</th><th>URL</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>UCP Overview</td><td>Technical/Product</td><td><a href="https://ucp.dev" target="_blank">ucp.dev</a></td></tr>
+                                    <tr><td>Agentic Commerce Docs</td><td>Developers</td><td><a href="https://shopify.dev/docs/agents" target="_blank">shopify.dev/docs/agents</a></td></tr>
+                                    <tr><td>Shopify + UCP Announcement</td><td>Executive</td><td><a href="https://shopify.com/ucp" target="_blank">shopify.com/ucp</a></td></tr>
+                                    <tr><td>Agentic Plan Waitlist</td><td>Non-Shopify brands</td><td><a href="https://shopify.com/agentic-plan" target="_blank">shopify.com/agentic-plan</a></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Objection Handling Quick Reference -->
+                <div class="faq-section objection-reference" data-category="all">
+                    <h3 class="faq-section-title">Objection Handling Quick Reference</h3>
+                    <div class="objection-grid">
+                        <div class="objection-quick">
+                            <div class="objection-q">"AI commerce is too early"</div>
+                            <div class="objection-a">9X traffic growth says otherwise. The question is whether you're positioned when it scales.</div>
+                        </div>
+                        <div class="objection-quick">
+                            <div class="objection-q">"We need to build custom"</div>
+                            <div class="objection-a">That's 6-12 months of dev time. Shopify merchants are live today with zero development.</div>
+                        </div>
+                        <div class="objection-quick">
+                            <div class="objection-q">"What about brand control?"</div>
+                            <div class="objection-a">Knowledge Base, Default Listings, and channel-specific controls give you full brand voice management.</div>
+                        </div>
+                        <div class="objection-quick">
+                            <div class="objection-q">"We're worried about fees"</div>
+                            <div class="objection-a">Shopify charges nothing. Some AI partners (ChatGPT) have their own fees—same as marketplace selling.</div>
+                        </div>
+                        <div class="objection-quick">
+                            <div class="objection-q">"SFCC can do this"</div>
+                            <div class="objection-a">Eventually, with significant investment. Shopify is the only platform with native, production-ready UCP today.</div>
+                        </div>
+                        <div class="objection-quick">
+                            <div class="objection-q">"Our legal team has concerns"</div>
+                            <div class="objection-a">We have updated Terms of Service specifically for agentic commerce. Happy to connect your legal with ours.</div>
+                        </div>
+                        <div class="objection-quick">
+                            <div class="objection-q">"We want to wait for GA"</div>
+                            <div class="objection-a">Understandable, but early adopters are building AI recommendation history that compounds. Zero risk to enable now.</div>
+                        </div>
+                        <div class="objection-quick">
+                            <div class="objection-q">"Will our customer data train AI?"</div>
+                            <div class="objection-a">No. Customer PII is not shared with AI partners for training. Only structured product data is exposed for discovery.</div>
+                        </div>
+                        <div class="objection-quick">
+                            <div class="objection-q">"We have bulk buyer concerns"</div>
+                            <div class="objection-a">Shopify's eligibility rules and fraud protection work across AI channels. You maintain the same controls as your storefront.</div>
+                        </div>
+                        <div class="objection-quick">
+                            <div class="objection-q">"Is this just a marketplace?"</div>
+                            <div class="objection-a">UCP is infrastructure, not a marketplace. AI agents query your catalog directly—you own the relationship and transaction.</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <svg class="footer-logo" viewBox="0 0 109 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24.5 5.87c-.13-.04-.76-.06-.76-.06s-1.56-1.53-1.72-1.7c-.16-.16-.47-.11-.59-.08l-.82.25c-.1-.28-.26-.62-.47-.97-.7-1.2-1.72-1.83-2.95-1.84h-.02c-.09 0-.17 0-.26.02-.04-.05-.08-.09-.12-.13-.53-.57-1.22-.85-2.03-.82-1.58.05-3.15 1.19-4.42 3.2-1.13 1.78-1.7 4.02-1.91 4.84l-3.14.97c-.94.3-1 .33-1.12 1.21L.33 39.76l19.17 3.3 10.8-2.67s-4.7-31.68-4.74-31.93c-.04-.24-.22-.55-.56-.59z" fill="currentColor"/>
+                    </svg>
+                    <span>UCP Enablement Hub</span>
+                </div>
+                <div class="footer-meta">
+                    <span>Last Updated: January 2026</span>
+                    <span>|</span>
+                    <span>Internal Use Only</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/app.js"></script>
+</body>
+</html>

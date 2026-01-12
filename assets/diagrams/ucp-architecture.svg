@@ -1,0 +1,164 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#008060"/>
+      <stop offset="100%" style="stop-color:#00a878"/>
+    </linearGradient>
+    <linearGradient id="secondaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#5c6ac4"/>
+      <stop offset="100%" style="stop-color:#7b8adb"/>
+    </linearGradient>
+    <linearGradient id="tertiaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00848e"/>
+      <stop offset="100%" style="stop-color:#00a6b2"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="500" fill="#fafbfb"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="24" font-weight="700" fill="#202223">Universal Commerce Protocol Architecture</text>
+  <text x="400" y="65" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="12" fill="#6d7175">How AI agents interact with Shopify merchants through UCP</text>
+  
+  <!-- Consumer Layer -->
+  <g transform="translate(50, 100)">
+    <rect x="0" y="0" width="180" height="120" rx="12" fill="white" stroke="#e1e3e5" stroke-width="2" filter="url(#shadow)"/>
+    <text x="90" y="30" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#202223">Consumer</text>
+    <text x="90" y="60" text-anchor="middle" font-size="36">👤</text>
+    <text x="90" y="90" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#6d7175">"Buy me running shoes"</text>
+    <text x="90" y="105" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#6d7175">"Where's my order?"</text>
+  </g>
+  
+  <!-- AI Agent Layer -->
+  <g transform="translate(50, 280)">
+    <rect x="0" y="0" width="180" height="120" rx="12" fill="white" stroke="#e1e3e5" stroke-width="2" filter="url(#shadow)"/>
+    <text x="90" y="30" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#202223">AI Agent</text>
+    <text x="90" y="60" text-anchor="middle" font-size="36">🤖</text>
+    <text x="90" y="90" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#6d7175">ChatGPT, Copilot,</text>
+    <text x="90" y="105" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#6d7175">Google, Claude</text>
+  </g>
+  
+  <!-- Connection: Consumer to Agent -->
+  <g>
+    <line x1="140" y1="220" x2="140" y2="260" stroke="#008060" stroke-width="2" stroke-dasharray="5,5"/>
+    <polygon points="140,280 135,265 145,265" fill="#008060"/>
+    <text x="160" y="250" font-family="Inter, sans-serif" font-size="10" fill="#008060">Intent</text>
+  </g>
+  
+  <!-- UCP Protocol Hub -->
+  <g transform="translate(300, 140)">
+    <rect x="0" y="0" width="200" height="220" rx="16" fill="#e3f1eb" stroke="#008060" stroke-width="3" filter="url(#shadow)"/>
+    <text x="100" y="35" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#008060">UCP</text>
+    <text x="100" y="55" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#006e52">Universal Commerce Protocol</text>
+    
+    <!-- Checkout Capability -->
+    <g transform="translate(20, 70)">
+      <rect x="0" y="0" width="160" height="40" rx="8" fill="url(#primaryGrad)"/>
+      <text x="30" y="26" font-size="18">🛒</text>
+      <text x="55" y="22" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="white">Checkout</text>
+      <text x="55" y="34" font-family="Inter, sans-serif" font-size="9" fill="rgba(255,255,255,0.8)">Cart, Payment, Complete</text>
+    </g>
+    
+    <!-- Identity Capability -->
+    <g transform="translate(20, 120)">
+      <rect x="0" y="0" width="160" height="40" rx="8" fill="url(#secondaryGrad)"/>
+      <text x="30" y="26" font-size="18">🔐</text>
+      <text x="55" y="22" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="white">Identity</text>
+      <text x="55" y="34" font-family="Inter, sans-serif" font-size="9" fill="rgba(255,255,255,0.8)">OAuth 2.0, Verifiable Creds</text>
+    </g>
+    
+    <!-- Order Capability -->
+    <g transform="translate(20, 170)">
+      <rect x="0" y="0" width="160" height="40" rx="8" fill="url(#tertiaryGrad)"/>
+      <text x="30" y="26" font-size="18">📦</text>
+      <text x="55" y="22" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="white">Order</text>
+      <text x="55" y="34" font-family="Inter, sans-serif" font-size="9" fill="rgba(255,255,255,0.8)">Status, Tracking, Returns</text>
+    </g>
+  </g>
+  
+  <!-- Connection: Agent to UCP -->
+  <g>
+    <line x1="230" y1="340" x2="280" y2="290" stroke="#008060" stroke-width="2"/>
+    <polygon points="300,270 285,273 288,288" fill="#008060"/>
+    <text x="240" y="295" font-family="Inter, sans-serif" font-size="10" fill="#008060" font-weight="600">JSON-RPC</text>
+  </g>
+  
+  <!-- Shopify Platform -->
+  <g transform="translate(570, 140)">
+    <rect x="0" y="0" width="180" height="220" rx="16" fill="white" stroke="#e1e3e5" stroke-width="2" filter="url(#shadow)"/>
+    <text x="90" y="35" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#202223">Shopify</text>
+    <text x="90" y="52" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#6d7175">Commerce Platform</text>
+    
+    <!-- Platform Components -->
+    <g transform="translate(15, 65)">
+      <rect x="0" y="0" width="70" height="50" rx="6" fill="#fafbfb" stroke="#e1e3e5" stroke-width="1"/>
+      <text x="35" y="25" text-anchor="middle" font-size="18">📋</text>
+      <text x="35" y="42" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#6d7175">Catalog</text>
+    </g>
+    
+    <g transform="translate(95, 65)">
+      <rect x="0" y="0" width="70" height="50" rx="6" fill="#fafbfb" stroke="#e1e3e5" stroke-width="1"/>
+      <text x="35" y="25" text-anchor="middle" font-size="18">🛒</text>
+      <text x="35" y="42" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#6d7175">Cart</text>
+    </g>
+    
+    <g transform="translate(15, 125)">
+      <rect x="0" y="0" width="70" height="50" rx="6" fill="#fafbfb" stroke="#e1e3e5" stroke-width="1"/>
+      <text x="35" y="25" text-anchor="middle" font-size="18">💳</text>
+      <text x="35" y="42" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#6d7175">Payments</text>
+    </g>
+    
+    <g transform="translate(95, 125)">
+      <rect x="0" y="0" width="70" height="50" rx="6" fill="#fafbfb" stroke="#e1e3e5" stroke-width="1"/>
+      <text x="35" y="25" text-anchor="middle" font-size="18">📦</text>
+      <text x="35" y="42" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#6d7175">Orders</text>
+    </g>
+    
+    <g transform="translate(15, 185)">
+      <rect x="0" y="0" width="150" height="25" rx="4" fill="#008060"/>
+      <text x="75" y="17" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="white">Merchant Store</text>
+    </g>
+  </g>
+  
+  <!-- Connection: UCP to Shopify -->
+  <g>
+    <line x1="500" y1="250" x2="550" y2="250" stroke="#008060" stroke-width="2"/>
+    <polygon points="570,250 555,245 555,255" fill="#008060"/>
+    <text x="525" y="240" font-family="Inter, sans-serif" font-size="10" fill="#008060" font-weight="600">API</text>
+  </g>
+  
+  <!-- Foundation Standards -->
+  <g transform="translate(0, 420)">
+    <rect x="100" y="0" width="600" height="60" rx="8" fill="#f6f6f7" stroke="#e1e3e5" stroke-width="1"/>
+    <text x="400" y="20" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#202223">Foundation Standards</text>
+    
+    <g transform="translate(120, 32)">
+      <rect x="0" y="0" width="120" height="20" rx="10" fill="white" stroke="#e1e3e5" stroke-width="1"/>
+      <text x="60" y="14" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#6d7175">REST + JSON-RPC</text>
+    </g>
+    
+    <g transform="translate(260, 32)">
+      <rect x="0" y="0" width="80" height="20" rx="10" fill="white" stroke="#e1e3e5" stroke-width="1"/>
+      <text x="40" y="14" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#6d7175">AP2</text>
+    </g>
+    
+    <g transform="translate(360, 32)">
+      <rect x="0" y="0" width="80" height="20" rx="10" fill="white" stroke="#e1e3e5" stroke-width="1"/>
+      <text x="40" y="14" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#6d7175">A2A</text>
+    </g>
+    
+    <g transform="translate(460, 32)">
+      <rect x="0" y="0" width="80" height="20" rx="10" fill="white" stroke="#e1e3e5" stroke-width="1"/>
+      <text x="40" y="14" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#6d7175">MCP</text>
+    </g>
+    
+    <g transform="translate(560, 32)">
+      <rect x="0" y="0" width="120" height="20" rx="10" fill="white" stroke="#e1e3e5" stroke-width="1"/>
+      <text x="60" y="14" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#6d7175">OAuth 2.0</text>
+    </g>
+  </g>
+</svg>
