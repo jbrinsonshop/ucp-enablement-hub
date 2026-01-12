@@ -3,8 +3,6 @@ name: Deploy to Quick
 on:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
   workflow_dispatch:
     inputs:
       environment:
@@ -12,19 +10,45 @@ on:
         required: false
         default: 'production'
 
+# Note: Automated deployment requires Quick CLI authentication
+# For now, use manual deployment with: quick deploy . ucp-enablement-hub
+# 
+# To enable CI/CD:
+# 1. Set up service account authentication for Quick
+# 2. Add GOOGLE_APPLICATION_CREDENTIALS secret
+# 3. Update workflow to use authenticated Quick CLI
+
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      id-token: write
     
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
       
-      - name: Deploy to Quick
-        uses: Shopify/skai-train/.github/actions/deploy-to-quick@main
-        with:
-          site_name: ucp-enablement-hub
-          dir: .
+      - name: Validate files
+        run: |
+          echo "🔍 Validating deployment files..."
+          test -f index.html && echo "✓ index.html exists" || exit 1
+          test -f styles/main.css && echo "✓ styles/main.css exists" || exit 1
+          test -f scripts/app.js && echo "✓ scripts/app.js exists" || exit 1
+          echo "✅ All required files present"
+      
+      - name: List deployment contents
+        run: |
+          echo "📦 Files to deploy:"
+          find . -type f -not -path './.git/*' -not -path './.github/*' | head -50
+      
+      - name: Deployment instructions
+        run: |
+          echo ""
+          echo "=========================================="
+          echo "🚀 MANUAL DEPLOYMENT REQUIRED"
+          echo "=========================================="
+          echo ""
+          echo "Run locally:"
+          echo "  cd ucp-enablement-hub"
+          echo "  quick deploy . ucp-enablement-hub"
+          echo ""
+          echo "Site URL: https://ucp-enablement-hub.quick.shopify.io"
+          echo "=========================================="
