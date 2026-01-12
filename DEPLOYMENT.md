@@ -4,6 +4,114 @@
 
 This document provides instructions for deploying the UCP Enablement Hub to **quick.shopify.io** for SE/Sales Leadership enablement.
 
+**Live Site**: [ucp-enablement-hub.quick.shopify.io](https://ucp-enablement-hub.quick.shopify.io)  
+**GitHub Repository**: [github.com/jbrinsonshop/ucp-enablement-hub](https://github.com/jbrinsonshop/ucp-enablement-hub)
+
+---
+
+## CI/CD Workflow (Recommended)
+
+The hub uses GitHub Actions for automated deployment to Quick. This is the recommended method for all updates.
+
+### How It Works
+
+```
+┌─────────────┐     ┌──────────────┐     ┌─────────────────┐     ┌──────────────────────┐
+│ Local Edit  │ ──> │ Push to main │ ──> │ GitHub Action   │ ──> │ quick.shopify.io     │
+│             │     │              │     │ triggers deploy │     │ auto-updated         │
+└─────────────┘     └──────────────┘     └─────────────────┘     └──────────────────────┘
+```
+
+### Deployment Triggers
+
+| Event | Action |
+|-------|--------|
+| Push to `main` | Auto-deploy to production |
+| Pull Request to `main` | Preview deployment (optional) |
+| Manual workflow_dispatch | Ad-hoc deployment |
+
+### GitHub Action Configuration
+
+The workflow file is located at `.github/workflows/deploy-to-quick.yml`:
+
+```yaml
+name: Deploy to Quick
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy to Quick
+        uses: Shopify/skai-train/.github/actions/deploy-to-quick@main
+        with:
+          site_name: ucp-enablement-hub
+          dir: .
+```
+
+### Content Update Process
+
+```
+1. Clone repository (if needed)
+   git clone https://github.com/jbrinsonshop/ucp-enablement-hub.git
+
+2. Create feature branch
+   git checkout -b feature/your-change
+
+3. Make changes locally
+
+4. Test locally
+   python3 -m http.server 8080
+   # Visit http://localhost:8080
+
+5. Commit and push
+   git add .
+   git commit -m "Description of changes"
+   git push origin feature/your-change
+
+6. Create Pull Request
+   - Go to GitHub
+   - Create PR from your branch to main
+   - Request review if needed
+
+7. Merge to main
+   - Once approved, merge the PR
+   - GitHub Action automatically deploys
+
+8. Verify
+   - Check https://ucp-enablement-hub.quick.shopify.io
+   - Confirm changes are live
+```
+
+### Rollback Procedure
+
+If a deployment needs to be rolled back:
+
+```bash
+# Option 1: Revert the commit
+git revert HEAD
+git push origin main
+
+# Option 2: Reset to previous commit
+git reset --hard HEAD~1
+git push --force origin main
+
+# Option 3: Manual deploy of previous version
+git checkout <previous-commit-sha>
+# Trigger manual workflow_dispatch from GitHub
+```
+
 ---
 
 ## Pre-Deployment Checklist
@@ -191,6 +299,43 @@ The following internal links are included in the Resources Hub:
 | 1.0 | January 2026 | Initial release for NRF 2026 |
 | 1.1 | January 12, 2026 | Added FAQ module, Agentic Plan module, live merchant proof points |
 | 1.2 | January 12, 2026 | Added UCP architecture deep-dive from Engineering blog, enhanced resources |
+| 1.3 | January 12, 2026 | Added Technical Integration guide, Checkout Limitations, Caveats Banner, GitHub CI/CD |
+
+For detailed version history, see [CHANGELOG.md](CHANGELOG.md).
+
+---
+
+## Release Process
+
+### Semantic Versioning
+
+This project follows semantic versioning: **MAJOR.MINOR.PATCH**
+
+- **MAJOR**: Significant new features or restructuring (e.g., new major module)
+- **MINOR**: New modules, sections, or functionality (e.g., adding FAQ section)
+- **PATCH**: Bug fixes, content updates, styling improvements (e.g., fixing typos)
+
+### Release Checklist
+
+When preparing a release:
+
+1. [ ] Update version number in CHANGELOG.md
+2. [ ] Update version number in DEPLOYMENT.md
+3. [ ] Test all changes locally
+4. [ ] Create PR with descriptive title
+5. [ ] Get approval if significant changes
+6. [ ] Merge to main
+7. [ ] Verify deployment at quick.shopify.io
+8. [ ] Tag release in GitHub (optional for major versions)
+
+### Creating a Release Tag
+
+For major releases, create a git tag:
+
+```bash
+git tag -a v1.3.0 -m "Version 1.3.0: Technical Integration guide and CI/CD"
+git push origin v1.3.0
+```
 
 ---
 
