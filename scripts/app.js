@@ -20,6 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeroDiagram();
   initCapabilitiesDiagram();
   initFAQ();
+  initHeroStats();
+  initProgressTracking();
+  initKeyboardShortcuts();
 });
 
 // =============================================================================
@@ -217,6 +220,9 @@ function initCalculator() {
   let totalScore = 0;
   const totalQuestions = questions.length;
   
+  // Create real-time score preview element
+  createScorePreview(calculator);
+  
   questions.forEach(question => {
     const options = question.querySelectorAll('.calc-option');
     
@@ -230,17 +236,33 @@ function initCalculator() {
         const score = parseInt(option.dataset.score);
         totalScore += score;
         
-        // Move to next question or show results
+        // Update real-time score preview
+        updateScorePreview(totalScore, totalQuestions, currentQuestion);
+        
+        // Move to next question with slide animation
         setTimeout(() => {
           if (currentQuestion < totalQuestions) {
-            question.classList.remove('active');
-            currentQuestion++;
-            questions[currentQuestion - 1].classList.add('active');
+            // Slide out current question
+            question.classList.add('slide-out-left');
             
-            // Update progress
-            const progress = (currentQuestion / totalQuestions) * 100;
-            progressFill.style.width = `${progress}%`;
-            currentQSpan.textContent = currentQuestion;
+            setTimeout(() => {
+              question.classList.remove('active', 'slide-out-left');
+              currentQuestion++;
+              
+              // Slide in next question
+              const nextQuestion = questions[currentQuestion - 1];
+              nextQuestion.classList.add('slide-in-right');
+              nextQuestion.classList.add('active');
+              
+              setTimeout(() => {
+                nextQuestion.classList.remove('slide-in-right');
+              }, 400);
+              
+              // Update progress
+              const progress = (currentQuestion / totalQuestions) * 100;
+              progressFill.style.width = `${progress}%`;
+              currentQSpan.textContent = currentQuestion;
+            }, 300);
           } else {
             showCalculatorResult(totalScore, totalQuestions);
           }
@@ -259,7 +281,7 @@ function initCalculator() {
       // Reset UI
       resultDiv.classList.remove('active');
       questions.forEach((q, i) => {
-        q.classList.remove('active');
+        q.classList.remove('active', 'slide-out-left', 'slide-in-right');
         if (i === 0) q.classList.add('active');
         q.querySelectorAll('.calc-option').forEach(opt => opt.classList.remove('selected'));
       });
@@ -267,10 +289,55 @@ function initCalculator() {
       progressFill.style.width = '12.5%';
       currentQSpan.textContent = '1';
       
-      // Hide questions container, show it
+      // Reset score preview
+      updateScorePreview(0, totalQuestions, 1);
+      
+      // Show questions container
       calculator.querySelector('.calculator-questions').style.display = 'block';
       calculator.querySelector('.calculator-progress').style.display = 'flex';
     });
+  }
+}
+
+function createScorePreview(calculator) {
+  const progress = calculator.querySelector('.calculator-progress');
+  if (!progress || progress.querySelector('.score-preview')) return;
+  
+  const preview = document.createElement('div');
+  preview.className = 'score-preview';
+  preview.innerHTML = `
+    <span class="score-preview-label">Current Score:</span>
+    <span class="score-preview-value">0%</span>
+    <div class="score-preview-bar">
+      <div class="score-preview-fill" style="width: 0%"></div>
+    </div>
+  `;
+  progress.appendChild(preview);
+}
+
+function updateScorePreview(currentScore, totalQuestions, currentQ) {
+  const preview = document.querySelector('.score-preview');
+  if (!preview) return;
+  
+  // Calculate current percentage (max score is questions answered * 3)
+  const maxPossibleNow = currentQ * 3;
+  const percentage = Math.round((currentScore / maxPossibleNow) * 100);
+  
+  const valueEl = preview.querySelector('.score-preview-value');
+  const fillEl = preview.querySelector('.score-preview-fill');
+  
+  valueEl.textContent = `${percentage}%`;
+  fillEl.style.width = `${percentage}%`;
+  
+  // Color based on tier
+  if (percentage >= 80) {
+    fillEl.style.background = 'var(--success)';
+  } else if (percentage >= 60) {
+    fillEl.style.background = 'var(--primary)';
+  } else if (percentage >= 40) {
+    fillEl.style.background = 'var(--warning)';
+  } else {
+    fillEl.style.background = 'var(--critical)';
   }
 }
 
@@ -501,6 +568,42 @@ function initCopyButtons() {
       
       if (track) {
         await copyToClipboard(track.textContent, btn);
+      }
+    });
+  });
+  
+  // Key Takeaways copy buttons
+  document.querySelectorAll('.copy-takeaways-btn').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const module = btn.dataset.module;
+      const takeawaysBox = btn.closest('.key-takeaways');
+      const takeaways = takeawaysBox?.querySelectorAll('.takeaways-list li');
+      
+      if (takeaways) {
+        let text = `Key Takeaways - ${module.charAt(0).toUpperCase() + module.slice(1).replace('-', ' ')}\n\n`;
+        takeaways.forEach((li, i) => {
+          const content = li.querySelector('span:last-child')?.textContent.trim();
+          if (content) {
+            text += `${i + 1}. ${content}\n\n`;
+          }
+        });
+        
+        await copyToClipboard(text.trim(), btn);
+        
+        // Visual feedback
+        btn.classList.add('copied');
+        const originalText = btn.innerHTML;
+        btn.innerHTML = `
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          Copied!
+        `;
+        
+        setTimeout(() => {
+          btn.classList.remove('copied');
+          btn.innerHTML = originalText;
+        }, 2000);
       }
     });
   });
@@ -1032,6 +1135,430 @@ function filterFAQItems(query) {
       objection.style.display = 'none';
     }
   });
+}
+
+// =============================================================================
+// Hero Stats Animation
+// =============================================================================
+
+function initHeroStats() {
+  const stats = document.querySelectorAll('.stat');
+  if (!stats.length) return;
+  
+  const heroSection = document.querySelector('.hero');
+  let hasAnimated = false;
+  
+  const animateStats = () => {
+    if (hasAnimated) return;
+    hasAnimated = true;
+    
+    stats.forEach((stat, index) => {
+      const valueEl = stat.querySelector('.stat-value');
+      if (!valueEl) return;
+      
+      const finalValue = valueEl.dataset.value || valueEl.textContent;
+      const suffix = valueEl.dataset.suffix || '';
+      const prefix = valueEl.dataset.prefix || '';
+      
+      // Extract numeric value
+      const numericValue = parseFloat(finalValue.replace(/[^0-9.]/g, ''));
+      
+      // Add animation class with stagger
+      setTimeout(() => {
+        stat.classList.add('stat-animating');
+        
+        // Animate the number
+        animateStatCounter(valueEl, 0, numericValue, 1500, prefix, suffix);
+        
+        // Add completion class
+        setTimeout(() => {
+          stat.classList.add('stat-complete');
+        }, 1600);
+      }, index * 200);
+    });
+  };
+  
+  // Use Intersection Observer to trigger animation when hero is visible
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        setTimeout(animateStats, 300);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.3
+  });
+  
+  if (heroSection) {
+    observer.observe(heroSection);
+  }
+}
+
+function animateStatCounter(element, start, end, duration, prefix = '', suffix = '') {
+  const startTime = performance.now();
+  const diff = end - start;
+  
+  // Store original content for screen readers
+  element.setAttribute('aria-label', `${prefix}${end}${suffix}`);
+  
+  function update(currentTime) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    
+    // Easing function (ease-out expo for dramatic effect)
+    const easeOut = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+    const current = start + diff * easeOut;
+    
+    // Format the number appropriately
+    let displayValue;
+    if (Number.isInteger(end)) {
+      displayValue = Math.round(current);
+    } else {
+      displayValue = current.toFixed(1);
+    }
+    
+    element.textContent = `${prefix}${displayValue}${suffix}`;
+    
+    if (progress < 1) {
+      requestAnimationFrame(update);
+    } else {
+      // Ensure final value is exact
+      element.textContent = `${prefix}${end}${suffix}`;
+    }
+  }
+  
+  requestAnimationFrame(update);
+}
+
+// =============================================================================
+// Progress Tracking System
+// =============================================================================
+
+function initProgressTracking() {
+  const STORAGE_KEY = 'ucp-hub-progress';
+  const modules = document.querySelectorAll('.module[id]');
+  
+  if (!modules.length) return;
+  
+  // Load saved progress
+  let progress = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+  
+  // Create progress indicator
+  createProgressIndicator(modules.length, progress);
+  
+  // Track module views
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+        const moduleId = entry.target.getAttribute('id');
+        if (!progress[moduleId]) {
+          progress[moduleId] = {
+            viewed: true,
+            timestamp: Date.now()
+          };
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+          updateProgressIndicator(modules.length, progress);
+          
+          // Update nav link with checkmark
+          const navLink = document.querySelector(`.nav-link[data-section="${moduleId}"]`);
+          if (navLink && !navLink.querySelector('.nav-check')) {
+            navLink.classList.add('viewed');
+          }
+        }
+      }
+    });
+  }, {
+    threshold: 0.5,
+    rootMargin: '-10% 0px -10% 0px'
+  });
+  
+  modules.forEach(module => observer.observe(module));
+  
+  // Check for return visit
+  const lastVisit = localStorage.getItem('ucp-hub-last-visit');
+  const now = Date.now();
+  
+  if (lastVisit && (now - parseInt(lastVisit)) > 3600000) { // More than 1 hour
+    const viewedCount = Object.keys(progress).length;
+    if (viewedCount > 0 && viewedCount < modules.length) {
+      showContinuePrompt(progress, modules);
+    }
+  }
+  
+  localStorage.setItem('ucp-hub-last-visit', now.toString());
+}
+
+function createProgressIndicator(total, progress) {
+  const nav = document.querySelector('.nav');
+  if (!nav) return;
+  
+  const viewedCount = Object.keys(progress).length;
+  const percentage = Math.round((viewedCount / total) * 100);
+  
+  const indicator = document.createElement('div');
+  indicator.className = 'progress-indicator';
+  indicator.innerHTML = `
+    <div class="progress-ring">
+      <svg viewBox="0 0 36 36">
+        <path class="progress-ring-bg"
+          d="M18 2.0845
+            a 15.9155 15.9155 0 0 1 0 31.831
+            a 15.9155 15.9155 0 0 1 0 -31.831"
+          fill="none"
+          stroke-width="3"
+        />
+        <path class="progress-ring-fill"
+          d="M18 2.0845
+            a 15.9155 15.9155 0 0 1 0 31.831
+            a 15.9155 15.9155 0 0 1 0 -31.831"
+          fill="none"
+          stroke-width="3"
+          stroke-dasharray="${percentage}, 100"
+        />
+      </svg>
+      <span class="progress-text">${viewedCount}/${total}</span>
+    </div>
+    <span class="progress-label">Modules</span>
+  `;
+  
+  // Insert before theme toggle
+  const themeToggle = nav.querySelector('.theme-toggle');
+  if (themeToggle) {
+    themeToggle.parentNode.insertBefore(indicator, themeToggle);
+  }
+}
+
+function updateProgressIndicator(total, progress) {
+  const indicator = document.querySelector('.progress-indicator');
+  if (!indicator) return;
+  
+  const viewedCount = Object.keys(progress).length;
+  const percentage = Math.round((viewedCount / total) * 100);
+  
+  const ringFill = indicator.querySelector('.progress-ring-fill');
+  const progressText = indicator.querySelector('.progress-text');
+  
+  if (ringFill) {
+    ringFill.style.strokeDasharray = `${percentage}, 100`;
+  }
+  if (progressText) {
+    progressText.textContent = `${viewedCount}/${total}`;
+  }
+  
+  // Add celebration effect when complete
+  if (viewedCount === total) {
+    indicator.classList.add('complete');
+    showToast('Congratulations! You\'ve viewed all modules.', 'success');
+  }
+}
+
+function showContinuePrompt(progress, modules) {
+  // Find last viewed module
+  let lastModule = null;
+  let lastTimestamp = 0;
+  
+  Object.keys(progress).forEach(moduleId => {
+    if (progress[moduleId].timestamp > lastTimestamp) {
+      lastTimestamp = progress[moduleId].timestamp;
+      lastModule = moduleId;
+    }
+  });
+  
+  // Find next unviewed module
+  let nextModule = null;
+  for (let i = 0; i < modules.length; i++) {
+    const moduleId = modules[i].getAttribute('id');
+    if (!progress[moduleId]) {
+      nextModule = moduleId;
+      break;
+    }
+  }
+  
+  if (nextModule) {
+    const prompt = document.createElement('div');
+    prompt.className = 'continue-prompt';
+    prompt.innerHTML = `
+      <div class="continue-content">
+        <span class="continue-icon">📚</span>
+        <div class="continue-text">
+          <strong>Welcome back!</strong>
+          <span>Continue where you left off?</span>
+        </div>
+        <a href="#${nextModule}" class="continue-btn">Continue</a>
+        <button class="continue-dismiss" aria-label="Dismiss">×</button>
+      </div>
+    `;
+    
+    document.body.appendChild(prompt);
+    
+    // Animate in
+    setTimeout(() => prompt.classList.add('visible'), 100);
+    
+    // Dismiss handlers
+    prompt.querySelector('.continue-dismiss').addEventListener('click', () => {
+      prompt.classList.remove('visible');
+      setTimeout(() => prompt.remove(), 300);
+    });
+    
+    prompt.querySelector('.continue-btn').addEventListener('click', () => {
+      prompt.classList.remove('visible');
+      setTimeout(() => prompt.remove(), 300);
+    });
+    
+    // Auto-dismiss after 10 seconds
+    setTimeout(() => {
+      if (prompt.parentNode) {
+        prompt.classList.remove('visible');
+        setTimeout(() => prompt.remove(), 300);
+      }
+    }, 10000);
+  }
+}
+
+// =============================================================================
+// Keyboard Shortcuts
+// =============================================================================
+
+function initKeyboardShortcuts() {
+  const modules = Array.from(document.querySelectorAll('.module[id]'));
+  const moduleIds = modules.map(m => m.getAttribute('id'));
+  let shortcutsModalOpen = false;
+  
+  document.addEventListener('keydown', (e) => {
+    // Don't trigger shortcuts when typing in inputs
+    if (e.target.matches('input, textarea, select')) return;
+    
+    const key = e.key.toLowerCase();
+    
+    // ? - Show shortcuts help
+    if (key === '?' || (e.shiftKey && key === '/')) {
+      e.preventDefault();
+      toggleShortcutsModal();
+      return;
+    }
+    
+    // Escape - Close modal
+    if (key === 'escape' && shortcutsModalOpen) {
+      toggleShortcutsModal();
+      return;
+    }
+    
+    // D - Toggle dark mode
+    if (key === 'd' && !e.metaKey && !e.ctrlKey) {
+      e.preventDefault();
+      document.getElementById('theme-toggle')?.click();
+      return;
+    }
+    
+    // J/K - Navigate modules
+    if (key === 'j' || key === 'k') {
+      e.preventDefault();
+      navigateModules(key === 'j' ? 'next' : 'prev', moduleIds);
+      return;
+    }
+    
+    // 1-8 - Jump to specific module
+    if (/^[1-8]$/.test(key)) {
+      e.preventDefault();
+      const index = parseInt(key) - 1;
+      if (moduleIds[index]) {
+        scrollToModule(moduleIds[index]);
+      }
+      return;
+    }
+    
+    // Home - Go to top
+    if (key === 'home') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+    
+    // End - Go to bottom
+    if (key === 'end') {
+      e.preventDefault();
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+      return;
+    }
+  });
+  
+  function toggleShortcutsModal() {
+    let modal = document.getElementById('shortcuts-modal');
+    
+    if (!modal) {
+      modal = document.createElement('div');
+      modal.id = 'shortcuts-modal';
+      modal.className = 'shortcuts-modal';
+      modal.innerHTML = `
+        <div class="shortcuts-content">
+          <div class="shortcuts-header">
+            <h3>Keyboard Shortcuts</h3>
+            <button class="shortcuts-close" aria-label="Close">×</button>
+          </div>
+          <div class="shortcuts-body">
+            <div class="shortcuts-section">
+              <h4>Navigation</h4>
+              <div class="shortcut-row"><kbd>J</kbd><span>Next module</span></div>
+              <div class="shortcut-row"><kbd>K</kbd><span>Previous module</span></div>
+              <div class="shortcut-row"><kbd>1</kbd>-<kbd>8</kbd><span>Jump to module</span></div>
+              <div class="shortcut-row"><kbd>Home</kbd><span>Go to top</span></div>
+              <div class="shortcut-row"><kbd>End</kbd><span>Go to bottom</span></div>
+            </div>
+            <div class="shortcuts-section">
+              <h4>Actions</h4>
+              <div class="shortcut-row"><kbd>D</kbd><span>Toggle dark mode</span></div>
+              <div class="shortcut-row"><kbd>?</kbd><span>Show this help</span></div>
+              <div class="shortcut-row"><kbd>Esc</kbd><span>Close modal</span></div>
+            </div>
+          </div>
+        </div>
+      `;
+      document.body.appendChild(modal);
+      
+      modal.querySelector('.shortcuts-close').addEventListener('click', toggleShortcutsModal);
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) toggleShortcutsModal();
+      });
+    }
+    
+    shortcutsModalOpen = !shortcutsModalOpen;
+    modal.classList.toggle('open', shortcutsModalOpen);
+    document.body.classList.toggle('modal-open', shortcutsModalOpen);
+  }
+  
+  function navigateModules(direction, moduleIds) {
+    // Find current module
+    const scrollPosition = window.scrollY + window.innerHeight / 3;
+    let currentIndex = -1;
+    
+    for (let i = 0; i < moduleIds.length; i++) {
+      const module = document.getElementById(moduleIds[i]);
+      if (module && module.offsetTop <= scrollPosition) {
+        currentIndex = i;
+      }
+    }
+    
+    let targetIndex;
+    if (direction === 'next') {
+      targetIndex = Math.min(currentIndex + 1, moduleIds.length - 1);
+    } else {
+      targetIndex = Math.max(currentIndex - 1, 0);
+    }
+    
+    if (moduleIds[targetIndex]) {
+      scrollToModule(moduleIds[targetIndex]);
+    }
+  }
+  
+  function scrollToModule(moduleId) {
+    const module = document.getElementById(moduleId);
+    if (module) {
+      const offset = 80;
+      const targetPosition = module.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+    }
+  }
 }
 
 // Page load animation
